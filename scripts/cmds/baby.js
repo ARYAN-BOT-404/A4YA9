@@ -15,7 +15,7 @@ module.exports = {
     }
   },
 onStart: async ({ api, event, args }) => {
-const link = `${global.GoatBot.config.api}/baby`;
+const link = `https://noobs-api.onrender.com/baby`;
   const dipto = args.join(" ").toLowerCase();
       const uid = event.senderID;
       let command;
