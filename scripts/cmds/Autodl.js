@@ -33,7 +33,7 @@ module.exports.onChat = async function ({ api, event, client, __GLOBAL }) {
     if (dipto.startsWith('https://i.imgur.com')) {
       const dipto3 = dipto.substring(dipto.lastIndexOf('.'));
       const response = await axios.get(dipto, { responseType: 'arraybuffer' });
-      const filename = __dirname + `/cache/dipto${dipto3}`;
+      const filename = __dirname + `/tmp/dipto${dipto3}`;
       fs.writeFileSync(filename, Buffer.from(response.data, 'binary'));
       api.sendMessage({
         body: `Downloaded from link`,
