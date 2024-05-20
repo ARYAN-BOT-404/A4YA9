@@ -48,6 +48,8 @@
   "authorFB": "https://www.facebook.com/profile.php?id=61559283257942",
   "authorEmail": "alvinohide@gmail.com",
   "prefix": "*",
+  "api":
+  "https://noobs-api.onrender.com/dipto"
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
