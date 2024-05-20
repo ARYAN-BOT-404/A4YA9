@@ -9,7 +9,7 @@ module.exports.config ={
   guide: {
       en: "{p}{n} or add [album]"
 }
-},onStart: async function({
+},onStart = async function({
 	event: e,
 	api: a,
 	args: n
