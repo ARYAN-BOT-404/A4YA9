@@ -20,7 +20,7 @@ module.exports.onChat = async function ({ api, event, client, __GLOBAL }) {
         api.sendMessage("please put a valid video link", event.threadID, event.messageID);
         return;
       }
-      const path = __dirname + `/cache/diptoo.mp4`;
+      const path = __dirname + `/tmp/diptoo.mp4`;
       const aa = await axios.get(`https://noobs-api.onrender.com/dipto/alldl?url=${encodeURIComponent(dipto)}`);
       const bb = aa.data;
       const vid = (await axios.get(bb.result, { responseType: "arraybuffer" })).data;
