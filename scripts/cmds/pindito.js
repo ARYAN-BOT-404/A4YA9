@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
     config: {
-        name: "pin",
+        name: "pin1",
         aliases: ["pinterest"],
         version: "1.0",
         author: "Dipto",
@@ -29,7 +29,7 @@ module.exports = {
 
         try {
             const w = await api.sendMessage("Please wait...", event.threadID);
-            const response = await axios.get(`${global.api.dipto}/pinterest?search=${encodeURIComponent(q)}&limit=${encodeURIComponent(length)}`);
+            const response = await axios.get(`https://noobs-api.onrender.com/pinterest?search=${encodeURIComponent(q)}&limit=${encodeURIComponent(length)}`);
             const data = response.data.data;
 
             if (!data || data.length === 0) {
