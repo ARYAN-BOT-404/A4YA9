@@ -1,4 +1,4 @@
-module.exports.onStart ={
+module.exports.config ={
   name: "album",
   version: "1.0.0",
   role: 0,
@@ -9,7 +9,7 @@ module.exports.onStart ={
   guide: {
       en: "{p}{n} or add [album]"
 }
-},onStart = async function({
+},onStart: async function({
 	event: e,
 	api: a,
 	args: n
