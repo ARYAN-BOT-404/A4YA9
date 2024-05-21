@@ -1,8 +1,8 @@
 
 const { loadImage, createCanvas } = require("canvas");
+
 module.exports = {
-  config: {
-    
+  config: {  
     name: "pair",
     aurthor:"xemon",
      role: 0,
