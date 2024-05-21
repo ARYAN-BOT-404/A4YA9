@@ -1,10 +1,8 @@
 
 const { loadImage, createCanvas } = require("canvas");
-const axios = require("axios");
-const fs = require("fs-extra");
-
 module.exports = {
   config: {
+    
     name: "pair",
     aurthor:"xemon",
      role: 0,
