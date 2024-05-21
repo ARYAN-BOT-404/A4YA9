@@ -157,12 +157,5 @@ module.exports = {
 
     return api.sendMessage(rand, threadID);
   },
-  onStart: async function ({ api, event, args, Threads, Users }) {
-    var { threadID, messageID } = event;
-    api.sendMessage(
-      "Bot is running.",
-      threadID,
-      messageID
-    );
-  }
+  onStart: async function ({ api, event, args, Threads, Users }) { }
 };
