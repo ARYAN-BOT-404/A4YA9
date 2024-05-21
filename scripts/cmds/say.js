@@ -1,6 +1,6 @@
 module.exports = {
 	config: {
-		name: "say",
+		name: "say2",
 		version: "1.0",
 		author: "Samir", // Time to wait before executing command again (seconds)
 		role: 0,
