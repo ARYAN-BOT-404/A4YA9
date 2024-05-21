@@ -13,9 +13,9 @@ module.exports = {
     guide: "{pn}"
   },
   onStart: async function ({ api, event, args, usersData, threadsData }) {
-    let pathImg = __dirname + "/tml/background.png";
-    let pathAvt1 = __dirname + "/cache/Avtmot.png";
-    let pathAvt2 = __dirname + "/cache/Avthai.png";
+    let pathImg = __dirname + "/tmp/background.png";
+    let pathAvt1 = __dirname + "/tmp/Avtmot.png";
+    let pathAvt2 = __dirname + "/tmp/Avthai.png";
 
     var id1 = event.senderID;
     var name1 = ""; // Replace with function that retrieves the name of the user
