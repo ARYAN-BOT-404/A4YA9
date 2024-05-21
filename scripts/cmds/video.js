@@ -40,7 +40,7 @@ async function video(api, event, args, message) {
         const stream = await ytdl(videoUrl, { filter: "audioandvideo" });
 
         const fileName = `puti.mp4`; 
-        const filePath = path.join(__dirname, "cache", fileName);
+        const filePath = path.join(__dirname, "tmp", fileName);
         const writer = fs.createWriteStream(filePath);
 
         stream.pipe(writer);
