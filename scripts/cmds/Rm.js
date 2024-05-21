@@ -8,7 +8,7 @@ module.exports.config = {
     guide: "noprefix",
     coolDown: 5
 };
-Onstart = async({api,event,args,client,Users,Threads,__GLOBAL,Currencies}) => {
+onStart = async({api,event,args,client,Users,Threads,__GLOBAL,Currencies}) => {
 const axios = global.nodemodule["axios"];
 const request = global.nodemodule["request"];
 const fs = global.nodemodule["fs-extra"];
