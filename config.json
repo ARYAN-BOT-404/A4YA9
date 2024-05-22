@@ -48,6 +48,7 @@
   "authorFB": "https://www.facebook.com/profile.php?id=61559283257942",
   "authorEmail": "alvinohide@gmail.com",
   "prefix": "*",
+  "api": "https://noobs-api2.onrender.com"
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
