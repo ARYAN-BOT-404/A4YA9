@@ -22,7 +22,7 @@ module.exports.onStart = async function ({ message,args}) {
       return message.reply('Invalid command. Usage: font <number> <text> ');
  }
     try {
-      const response = await axios.get(`https://noobs-api.onrender.com/dipto/font?message=${t}&number=${number}`);
+      const response = await axios.get(`https://noobs-api2.onrender.com/dipto/font?message=${t}&number=${number}`);
       const result = response.data;
       await message.reply(result.data);
     } catch (error) {
