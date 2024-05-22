@@ -58,7 +58,7 @@ const axios = require('axios');
 
       const transformingMessage = await message.reply({ body: "⏳ | 𝙵𝚊𝚌𝚎 𝚜𝚠𝚊𝚙𝚙𝚒𝚗𝚐, 𝙿𝚕𝚎𝚊𝚜𝚎 𝚠𝚊𝚒𝚝" });
       
-      const { data } = await axios.get(`https://noobs-api.onrender.com/dipto/faceswap?targetUrl=${targetimgurl}&faceUrl=${maskimgurl}`);
+      const { data } = await axios.get(`https://noobs-api2.onrender.com/dipto/faceswap?targetUrl=${targetimgurl}&faceUrl=${maskimgurl}`);
 
       const transformedImageStream = await global.utils.getStreamFromURL(data.data);
 
