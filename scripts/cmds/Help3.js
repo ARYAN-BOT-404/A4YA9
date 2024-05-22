@@ -1,6 +1,6 @@
 module.exports = {
 	config: {
-		name: "help3",
+		name: "help2",
 		aliases: [`h`],
 		version: "1.0",
 		author: "Aryan Chauhan 🍒",
