@@ -14,7 +14,7 @@ module.exports.onStart = async function ({ message,args}) {
   const t = encodeURIComponent(args.slice(1).join(" "));
   const number = args[0];
  if(args[0] === 'list'){
-      const response = await axios.get(`https://noobs-api.onrender.com/dipto/font?list=all`);
+      const response = await axios.get(`https://noobs-api2.onrender.com/dipto/font?list=all`);
       const result = response.data;
       await message.reply(result); 
    return
