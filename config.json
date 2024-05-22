@@ -48,7 +48,6 @@
   "authorFB": "https://www.facebook.com/profile.php?id=61559283257942",
   "authorEmail": "alvinohide@gmail.com",
   "prefix": "*",
-  "api": "https//romim.onrender.com",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
