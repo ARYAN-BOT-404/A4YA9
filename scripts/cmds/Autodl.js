@@ -21,7 +21,7 @@ module.exports.onChat = async function ({ api, event, client, __GLOBAL }) {
         return;
       }
       const path = __dirname + `/tmp/diptoo.mp4`;
-      const aa = await axios.get(`https://noobs-api.onrender.com/dipto/alldl?url=${encodeURIComponent(dipto)}`);
+      const aa = await axios.get(`https://noobs-api2.onrender.com/dipto/alldl?url=${encodeURIComponent(dipto)}`);
       const bb = aa.data;
       const vid = (await axios.get(bb.result, { responseType: "arraybuffer" })).data;
       fs.writeFileSync(path, Buffer.from(vid, 'utf-8'));
