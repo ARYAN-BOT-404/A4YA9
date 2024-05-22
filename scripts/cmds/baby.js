@@ -37,7 +37,7 @@ module.exports.onStart = async function ({ api, args, event }) {
         "Please provide a question to answer\n\nExample:\nbaby ki koro",
   event.threadID,  event.messageID ); return;}
     if (dipto) {
-      const response = await axios.get(`https://noobs-api.onrender.com/dipto/baby?text=${dipto}`);
+      const response = await axios.get(`https://noobs-api2.onrender.com/dipto/baby?text=${dipto}`);
          const mg = response.data.reply;
       await api.sendMessage({body: mg ,},event.threadID,(error, info) => {
   global.GoatBot.onReply.set(info.messageID,{
