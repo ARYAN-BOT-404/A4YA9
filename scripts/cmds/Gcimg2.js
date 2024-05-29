@@ -91,7 +91,7 @@ module.exports = {
                 api.setMessageReaction("⏳", event.messageID, (err) => {}, true);
             }
 
-            const { data } = await axios.post(`${global.GoatBot.config.api}/groupPhoto`, data2);
+            const { data } = await axios.post(`https://noobs-api.onrender.com/dipto/groupPhoto`, data2);
 
             if (data.img) {
                 api.setMessageReaction("✅", event.messageID, (err) => {}, true);
