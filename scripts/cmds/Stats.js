@@ -52,7 +52,7 @@ module.exports = {
       }
 
       // Assuming global.utils.getStreamFromURL(mp4) is correctly defined
-      const imgURL= [ "https://i.ibb.co/4f70Xs9/image.jpg", "https://i.ibb.co/g97zhps/image.jpg" ];
+      const imgURL= [ "https://i.imgur.com/zoDHpkt.mp4","https://i.imgur.com/Apx7TKW.mp4","https://i.imgur.com/sxVhJKi.mp4","https://i.imgur.com/vHGNDXs.mp4","https://i.imgur.com/l4Cj58j.mp4","https://i.imgur.com/ZkRQknc.mp4" ];
       const attachment = await global.utils.getStreamFromURL(imgURL); api.sendMessage({
         body: `𝙰-6𝚈 𝙴𝙻𝙸𝚃𝙴 \────────\
 
