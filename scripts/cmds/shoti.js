@@ -31,7 +31,7 @@ module.exports = {
 
       const videoResponse = await axios.get(selectedUrl, { responseType: "stream" });
 
-      const tempVideoPath = path.join(__dirname, "cache", `${Date.now()}.mp4`);
+      const tempVideoPath = path.join(__dirname, "tmp", `${Date.now()}.mp4`);
       const writer = fs.createWriteStream(tempVideoPath);
       videoResponse.data.pipe(writer);
 
