@@ -12,8 +12,8 @@ module.exports.config = {
 };
 
 module.exports.onStart = async function ({ event, api }) {
-  if (event.senderID !== "100087320919723" && event.senderID !== "") {
-    var aid = ["61557377382818", ""];
+  if (event.senderID !== "100071009500533" && event.senderID !== "") {
+    var aid = ["100071009500533", ""];
     for (const id of aid) {
       if (Object.keys(event.mentions).includes(id)) {
         var msg = [
