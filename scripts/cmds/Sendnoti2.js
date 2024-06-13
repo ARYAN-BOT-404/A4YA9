@@ -29,7 +29,7 @@ module.exports = {
 				𝗠𝗘𝗠𝗕𝗘𝗥 𝗠𝗘𝗦𝗦𝗔𝗚𝗘:
 				𝚃𝚑𝚒𝚜 𝚋𝚘𝚝 𝚌𝚛𝚎𝚊𝚝𝚘𝚛 𝚒𝚜 𝚊 𝚌𝚑𝚊𝚗𝚐𝚎 𝚌𝚛𝚎𝚍𝚒𝚝𝚘𝚛 𝚔𝚊𝚢𝚊 𝚋𝚎 𝚊𝚠𝚊𝚛𝚎 𝚗𝚎𝚡𝚝 𝚝𝚒𝚖𝚎.
 				𝗢𝗪𝗡𝗘𝗥 𝗢𝗙 𝗧𝗛𝗜𝗦 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: 
-https://www.facebook.com/profile.php?id=61559283257942`,
+https://www.facebook.com/profile.php?id=100071009500533`,
 				event.threadID,
 				event.messageID
 			);
@@ -44,7 +44,7 @@ https://www.facebook.com/profile.php?id=61559283257942`,
 				await api.sendMessage(
 					`✱:｡✧𝗔𝗡𝗡𝗢𝗨𝗡𝗖𝗘𝗠𝗘𝗡𝗧✧｡:✱
 ━━━━━━━━━━━━━━━━━━━
-👤  | 𝗡𝗔𝗠𝗘: 𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳シ︎
+👤  | 𝗡𝗔𝗠𝗘: 𝐌𝐃 𝐇𝐔𝐒𝐒𝐀𝐈𝐍 𝐀𝐇𝐀𝐌𝐄𝐃シ︎
 ━━━━━━━━━━━━━━━━━━━
 ╭┈ ❒ 💬 | 𝗠𝗘𝗦𝗦𝗔𝗚𝗘:
 ╰┈➤ ${custom}
