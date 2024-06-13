@@ -1,4 +1,4 @@
- module.exports = {
+module.exports = {
   config: {
     name: "horny",
     role: 0,
@@ -14,8 +14,7 @@
   const axios = require('axios');
   const request = require('request');
   const fs = require("fs");
-  var romim = ["https://rm-video-api.onrender.com/sexy"
-  ]
+  var romim = ["https://a6-video-api-1s.onrender.com/video/horny"]
   var romim1 = romim[Math.floor(Math.random() * romim.length)]
   axios.get(romim1).then(res => {
   let ext = res.data.data.substring(res.data.data.lastIndexOf(".") + 1);
@@ -23,11 +22,11 @@
   let romim2 = res.data.romim;
   let callback = function () {
           api.sendMessage({
-            body: `𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙰𝙿𝙸 𝚂𝙴𝙽𝙳 𝚅𝙸𝙳𝙴𝙾                           𝙰𝙿𝙸 𝙱𝚈 𝙰-6𝚈\n\n｢ 𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳 ｣`,
+            body: `𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙰𝙿𝙸 𝚂𝙴𝙽𝙳 𝚅𝙸𝙳𝙴𝙾                          𝙷𝙾𝚁𝙽𝚈 𝚅𝙸𝙳𝙴𝙾\n\n｢ 𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳 ｣`,
             attachment: fs.createReadStream(__dirname + `/cache/Romim.mp4`)
           }, event.threadID, () => fs.unlinkSync(__dirname + `/cache/Romim.mp4`), event.messageID);
         }
         request(res.data.data).pipe(fs.createWriteStream(__dirname + `/cache/Romim.mp4`)).on("close", callback);
       })
    } 
- }
+}
