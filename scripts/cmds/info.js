@@ -15,15 +15,15 @@ module.exports = {
 		envConfig: {}
 	},
 	onStart: async function ({ message }) {
-		const botName = "Bbe";
-		const botPrefix = "*";
-		const authorName = "𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳";
+		const botName = "𝙷𝚄𝚂𝚂𝙰𝙸𝙽 𝙸𝚂 𝙷𝙴𝚁𝙴";
+		const botPrefix = "/";
+		const authorName = "𝙷𝚄𝚂𝚂𝙰𝙸𝙽 𝙰𝙷𝙼𝙴𝙳";
 		const ownAge = "++";
 		const teamName = "Github team";
-		const authorFB = "https://www.facebook.com/profile.php?id=61559283257942";
+		const authorFB = "https://www.facebook.com/profile.php?id=100071009500533";
 		const authorInsta = "https://www.instagram.com/aruu.babe";
 		const tikTok = "https://www.tiktok.com/@mixxa_ff1";
-		const urls = JSON.parse(fs.readFileSync('cliff.json'));
+		const urls = JSON.parse(fs.readFileSync('a6.json'));
 		const link = urls[Math.floor(Math.random() * urls.length)];
 		const now = moment().tz('Asia/Jakarta');
 		const date = now.format('MMMM Do YYYY');
@@ -42,8 +42,6 @@ module.exports = {
 \❏ 𝙾𝚆𝙽𝙴𝚁 𝙽𝙰𝙼𝙴: ${authorName}
 \❏ 𝙾𝚆𝙽𝙴𝚁 𝙰𝙶𝙴 : ${ownAge}
 \❏ 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺: ${authorFB}
-\❏ 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼: ${authorInsta}
-\❏ 𝚃𝙸𝙺𝚃𝙾𝙺: ${tikTok}
 \❏ 𝙳𝙰𝚃𝙴: ${date}
 \❏ 𝚃𝙸𝙼𝙴: ${time}
 \❏ 𝚃𝙴𝙰𝙼: ${teamName}
