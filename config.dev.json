@@ -1,7 +1,7 @@
 {
   "facebookAccount": {
-    "email": "bid123713@gmail.com",
-    "password": "@Romimas123",
+    "email": "",
+    "password": "",
     "2FASecret": "",
     "i_user": "",
     "proxy": null,
@@ -17,39 +17,39 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "100087320919723",
-    "61559283257942",
-    "61557377382818",
-    "61553354655197"
+    "100071009500533",
+    "",
+    ""
   ],
   "GOD": [
-    "61559283257942",
-    "61557377382818",
-    "100087320919723"
+    "100071009500533",
+    "",
+    ""
   ],
   "DEV": [
-    "61559283257942",
-    "100087320919723",
-    "61557377382818"
+    "100071009500533",
+    "",
+    ""
   ],
   "VIP": [
-    "61559283257942",
-    "100087320919723",
-    "61557377382818"
+    "100071009500533",
+    "",
+    ""
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [
-      "61559283257942"
+      "100071009500533"
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "",
-  "authorName": "𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳",
-  "authorFB": "https://www.facebook.com/profile.php?id=61559283257942",
-  "authorEmail": "alvinohide@gmail.com",
-  "prefix": "*",
+  "authorName": "𝐌𝐃 𝐇𝐔𝐒𝐒𝐀𝐈𝐍 𝐀𝐇𝐀𝐌𝐄𝐃",
+  "authorFB": "https://www.facebook.com/profile.php?id=100071009500533",
+  "authorEmail": "x2hussainbot120@gmail.com",
+  "prefix": "/",
   "api": "https://noobs-api2.onrender.com/dipto",
+  "rubishapi": "https://rubish-apihub.onrender.com/rubish",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
