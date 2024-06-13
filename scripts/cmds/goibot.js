@@ -42,14 +42,14 @@ config: {
          return api.sendMessage("What dog just talked bad about me, want to die😠", threadID);
        };
 
-       if ((event.body.toLowerCase() == "@Aris E") || (event.body.toLowerCase() == "@tiny")) {
+       if ((event.body.toLowerCase() == "@HUSSAIN ꋂョ o.O") || (event.body.toLowerCase() == "sumu")) {
          return api.sendMessage("hum sunsi bolo 😒", threadID);
        };
 
        if ((event.body.toLowerCase() == "chummma") || (event.body.toLowerCase() == "undercover cmm")) {
          return api.sendMessage("Being disobedient to your biological parents, you say that's a broken person", threadID);
        };
-if            ((event.body.toLowerCase() == "@Ariyan") || (event.body.toLowerCase() == "Romim")) {
+if            ((event.body.toLowerCase() == "Hussain") || (event.body.toLowerCase() == "Hussain")) {
          return api.sendMessage("yo bolo ki bolba 😒", threadID);
        };
        if ((event.body.toLowerCase() == "Gorur bot") || (event.body.toLowerCase() == "gorur bot")) {
@@ -64,7 +64,7 @@ if            ((event.body.toLowerCase() == "@Ariyan") || (event.body.toLowerCas
        if ((event.body.toLowerCase() == "bot koi") || (event.body.toLowerCase() == "baby tmi koi?")) {
          return api.sendMessage("aije aije 🙋 ami ai dike 😋hum bolo 😻", threadID);
        };
-       if ((event.body.toLowerCase() == "romim") || (event.body.toLowerCase() == "Romim")) {
+       if ((event.body.toLowerCase() == "Hussain vai") || (event.body.toLowerCase() == "Hussain bhai")) {
          return api.sendMessage("amr boss ar kase tumar ki kaj?😒", threadID);
        };
        if ((event.body.toLowerCase() == "baddop") || (event.body.toLowerCase() == "biyadopi")) {
@@ -190,7 +190,7 @@ if            ((event.body.toLowerCase() == "@Ariyan") || (event.body.toLowerCas
      return api.sendMessage("️Amr Mukh, Amr iccha, Amr Mon. Tor ki bal,,,shala abal...ja vaag... 😒🙄", threadID, messageID);
    };
 
-    if ((event.body.toLowerCase() == "khana khaya?") || (event.body.toLowerCase() == "khaiso")) {
+    if ((event.body.toLowerCase() == "kaiso") || (event.body.toLowerCase() == "khaiso")) {
      return api.sendMessage("️Nh...Tmk khabo.💖🥳", threadID, messageID);
    };
 
@@ -218,7 +218,7 @@ if            ((event.body.toLowerCase() == "@Ariyan") || (event.body.toLowerCas
    };
 
   if ((event.body.toLowerCase() == "bro")) {
-     return api.sendMessage("️But I Am Girl, You Can Call Me Maya", threadID, messageID);
+     return api.sendMessage("️But I Am Girl, You Can Call Me sumu😚🫂", threadID, messageID);
    };
 
   if ((event.body.toLowerCase() == "boy")) {
