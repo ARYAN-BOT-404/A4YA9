@@ -29,7 +29,7 @@ module.exports = {
 
         try {
             const w = await api.sendMessage("Please wait...", event.threadID);
-            const response = await axios.get(`https://noobs-api2.onrender.com/dipto/pinterest?search=${encodeURIComponent(q)}&limit=${encodeURIComponent(length)}`);
+            const response = await axios.get(`https://nobs-api.onrender.com/dipto/pinterest?search=${encodeURIComponent(q)}&limit=${encodeURIComponent(length)}`);
             const data = response.data.data;
 
             if (!data || data.length === 0) {
