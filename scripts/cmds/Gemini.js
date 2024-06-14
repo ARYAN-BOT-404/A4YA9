@@ -20,7 +20,7 @@ module.exports.onReply = async function ({ api, event, Reply}) {
   if (event.type == "message_reply") {
   const reply = event.body.toLowerCase();;
   if (isNaN(reply)) {
-    const response = await axios.get(`https://noobs-api2.onrender.com/dipto/gemini2?text=${encodeURIComponent(reply)}&senderID=${uid}`)
+    const response = await axios.get(`https://nobs-api.onrender.com/dipto/gemini2?text=${encodeURIComponent(reply)}&senderID=${uid}`)
        const ok = response.data.response
     await api.sendMessage(ok ,event.threadID,(error, info) => {
   global.GoatBot.onReply.set(info.messageID,{
