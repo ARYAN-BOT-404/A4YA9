@@ -17,38 +17,37 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "100071009500533",
     "61557377382818",
+    "",
     ""
   ],
   "GOD": [
-    "100071009500533",
+    "61557377382818",
     "",
     ""
   ],
   "DEV": [
-    "100071009500533",
+    "61557377382818",
     "",
     ""
   ],
   "VIP": [
-    "100071009500533",
+    "61557377382818",
     "",
     ""
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [
-      "100071009500533",
       "61557377382818"
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "",
-  "authorName": "𝐌𝐃 𝐇𝐔𝐒𝐒𝐀𝐈𝐍 𝐀𝐇𝐀𝐌𝐄𝐃",
-  "authorFB": "https://www.facebook.com/profile.php?id=100071009500533",
-  "authorEmail": "x2hussainbot120@gmail.com",
-  "prefix": "/",
+  "nickNameBot": "Alixa bbe",
+  "authorName": "𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳",
+  "authorFB": "https://www.facebook.com/profile.php?id=61557377382818",
+  "authorEmail": "romima285@gmail.com",
+  "prefix": """,
   "api": "https://noobs-api2.onrender.com/dipto",
   "rubishapi": "https://rubish-apihub.onrender.com/rubish",
   "database": {
