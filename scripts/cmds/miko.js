@@ -2,7 +2,7 @@ const axios = require('axios');
 
 module.exports = {
 	config: {
-		name: "ai",
+		name: "miko",
 		author: "Romim",//api by miko mimpin
 		version: "2.0",
 		cooldowns: 0,
