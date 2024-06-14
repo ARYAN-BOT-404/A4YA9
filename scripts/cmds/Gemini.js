@@ -42,7 +42,7 @@ module.exports.onStart = async function ({ api, args, event }) {
         "𝙿𝙻𝙴𝙰𝚂𝙴 𝙿𝚁𝙾𝚅𝙸𝙳𝙳 𝙰 𝚀𝚂 𝚃𝙾 𝙰𝙽𝚂 \n\n𝙴𝚇𝙰𝙼𝙿𝙻𝙴:\n𝙶𝙴𝙼𝙸𝙽𝙸 𝙷𝙴𝚈",
   event.threadID,  event.messageID ); return;}
     if (dipto) {
-      const response = await axios.get(`https://noobs-api2.onrender.com/dipto/gemini2?text=${encodeURIComponent(dipto)}&senderID=${uid}`);
+      const response = await axios.get(`https://nobs-api.onrender.com/dipto/gemini2?text=${encodeURIComponent(dipto)}&senderID=${uid}`);
          const mg = response.data.response;
       await api.sendMessage({body: mg ,},event.threadID,(error, info) => {
   global.GoatBot.onReply.set(info.messageID,{
