@@ -6,7 +6,7 @@ module.exports.config = {
   role: 0,
   author: "Romim",
   description: "album video",
-  commandCategory: "video list",
+  category: "video list",
   countDown: 5,
 };
 
