@@ -22,7 +22,7 @@ module.exports = {
   let romim2 = res.data.romim;
   let callback = function () {
           api.sendMessage({
-            body: `𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙰𝙿𝙸 𝚂𝙴𝙽𝙳 𝚅𝙸𝙳𝙴𝙾                           𝙻𝙾𝚅𝙴 𝚅𝙸𝙳𝙴𝙾\n\n｢ 𝐇𝐔𝐒𝐒𝐀𝐈𝐍 𝐀𝐇𝐀𝐌𝐄𝐃  ｣`,
+            body: `𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙰𝙿𝙸 𝚂𝙴𝙽𝙳 𝚅𝙸𝙳𝙴𝙾                           𝙻𝙾𝚅𝙴 𝚅𝙸𝙳𝙴𝙾\n\n｢ 𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳  ｣`,
             attachment: fs.createReadStream(__dirname + `/cache/Romim.mp4`)
           }, event.threadID, () => fs.unlinkSync(__dirname + `/cache/Romim.mp4`), event.messageID);
         }
