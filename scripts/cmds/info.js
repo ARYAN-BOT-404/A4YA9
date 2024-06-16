@@ -15,13 +15,13 @@ module.exports = {
 		envConfig: {}
 	},
 	onStart: async function ({ message }) {
-		const botName = "𝙰𝙻𝙸𝚇𝙰 𝙱𝙱𝙴";
+		const botName = "𝙰-6𝚈 𝙱𝙾𝚃";
 		const botPrefix = "*";
 		const authorName = "𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳";
 		const ownAge = "++";
 		const teamName = "Github team";
 		const authorFB = "https://www.facebook.com/profile.php?id=61557377382818";
-		const authorInsta = "https://www.instagram.com/aruuu.bbe01";
+		const authorInsta = "https://www.instagram.com/aruu.babe";
 		const tikTok = "https://www.tiktok.com/@mixxa_ff1";
 		const urls = JSON.parse(fs.readFileSync('a6.json'));
 		const link = urls[Math.floor(Math.random() * urls.length)];
@@ -36,19 +36,18 @@ module.exports = {
 		const uptimeString = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
 
 		message.reply({
-			body: `═══ 𝙱𝙾𝚃 & 𝙾𝚆𝙽𝙴𝚁 𝙸𝙽𝙵𝙾 ═══
+			body: `===「 𝙱𝙾𝚃 & 𝙾𝚆𝙽𝙴𝚁 𝙸𝙽𝙵𝙾 」===
 \❏ 𝙱𝙾𝚃 𝙽𝙰𝙼𝙴: ${botName}
 \❏ 𝙱𝙾𝚃 𝙿𝚁𝙴𝙵𝙸𝚇: ${botPrefix}
 \❏ 𝙾𝚆𝙽𝙴𝚁 𝙽𝙰𝙼𝙴: ${authorName}
 \❏ 𝙾𝚆𝙽𝙴𝚁 𝙰𝙶𝙴 : ${ownAge}
 \❏ 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺: ${authorFB}
-\❏ 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼: ${authorInsta}     
-\❏ 𝚃𝙸𝙺𝚃𝙾𝙺: ${authortiktok} 
+\❏ 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼: ${authorInsta}
 \❏ 𝙳𝙰𝚃𝙴: ${date}
 \❏ 𝚃𝙸𝙼𝙴: ${time}
 \❏ 𝚃𝙴𝙰𝙼: ${teamName}
 \❏ 𝚄𝙿𝚃𝙸𝙼𝙴: ${uptimeString}
-\════════════`,
+\===============`,
 			attachment: await global.utils.getStreamFromURL(link)
 		});
 	},
