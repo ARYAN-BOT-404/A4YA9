@@ -2,7 +2,7 @@ const fs = require('fs');
 
 module.exports = {
 	config: {
-		name: "file",
+		name: "file2",
 		aliases: ["files"],
 		version: "1.0",
 		author: "Mahir Tahsan",
