@@ -31,7 +31,7 @@ module.exports = {
 	langs: {
 		vi: {
 			help: "╭─────────────♕︎\n『%1』\n├─────𖣘\n│ Trang [ %2/%3 ]\n│ Hiện tại bot có %4 lệnh có thể sử dụng\n│ » Gõ %5help <số trang> để xem danh sách các lệnh\n│ » Gõ %5help để xem chi tiết cách sử dụng lệnh đó\n├────────✵\n│ %6\n╰─────────────♕︎",
-			attechment:fs.createReadStream("https://i.imgur.com/hUSnZNx.jpeg"),
+			attechment:fs.createReadStream("help.jpg"),
 			help2: "%1├───────✵\n│ » Hiện tại bot có %2 lệnh có thể sử dụng\n│ » Gõ %3help <tên lệnh> để xem chi tiết cách sử dụng lệnh đó\n│ %4\n╰─────────────♕︎",
 			commandNotFound: "Lệnh \"%1\" không tồn tại",
 			getInfoCommand: "╭── 𝙽𝙰𝙼𝙴 ────♕︎\n│ %1\n├── 𝙸𝙽𝙵𝙾\n│ Mô tả: %2\n│ Các tên gọi khác: %3\n│ Các tên gọi khác trong nhóm bạn: %4\n│𝚅𝙴𝚁𝚂𝙸𝙾𝙽: %5\n│ Role: %6\n│ Thời gian mỗi lần dùng lệnh: %7s\n│ 𝙰𝚄𝚃𝙷𝙾𝚁: %8\n├── 𝚄𝚂𝙰𝙶𝙴\n│%9\n├── 𝙽𝙾𝚃𝙴𝚂\n│ Nội dung bên trong <XXXXX> là có thể thay đổi\n│ Nội dung bên trong [a|b|c] là a hoặc b hoặc c\n╰──────✵",
@@ -106,6 +106,19 @@ module.exports = {
 						priority: value.priority || 0
 					});
 				}
+				const helpListImages = [
+				'https://i.imgur.com/hUSnZNx.jpeg',
+
+				'https://i.imgur.com/eMCYqMv.jpeg',
+			];
+
+			const helpListImage = helpListImages[Math.floor(Math.random() * helpListImages.length)];
+
+			await message.reply({
+				body: msg,
+				attachment: await global.utils.getStreamFromURL(helpListImage),
+});
+			}
 
 				arrayInfo.sort((a, b) => a.data - b.data); // sort by name
 				arrayInfo.sort((a, b) => a.priority > b.priority ? -1 : 1); // sort by priority
@@ -267,3 +280,4 @@ function cropContent(content, max) {
 	}
 	return content;
       }
+			
