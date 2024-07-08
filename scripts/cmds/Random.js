@@ -15,14 +15,14 @@ module.exports = {
   const request = require('request');
   const fs = require("fs");
   var romim = [
-    "https://a6-video-api.onrender.com/video/football","https://a6-video-api-1s.onrender.com/video/messi",
-   "https://a6-video-api.onrender.com/video/neymar",
-    "https://a6-video-api.onrender.com/video/cr7",
-    "https://a6-video-api.onrender.com/video/editfff",
-  "https://a6-video-api.onrender.com/video/sadff",
-  "https://a6-video-api.onrender.com/video/sakib",
-  "https://a6-video-api.onrender.com/video/hazy",
-    "https://a6-video-api.onrender.com/video/sigma"
+    "https://a6-video-api-t0il.onrender.com/video/football","https://a6-video-api-t0il.onrender.com/video/messi",
+   "https://a6-video-api-t0il.onrender.com/video/neymar",
+    "https://a6-video-api-t0il.onrender.com/video/cr7",
+    "https://a6-video-api-t0il.onrender.com/video/editfff",
+  "https://a6-video-api-t0il.onrender.com/video/sadff",
+  "https://a6-video-api-t0il.onrender.com/video/sakib",
+  "https://a6-video-api-t0il.onrender.com/video/hazy",
+    "https://a6-video-api-t0il.onrender.com/video/sigma"
   ]
   var romim1 = romim[Math.floor(Math.random() * romim.length)]
   axios.get(romim1).then(res => {
