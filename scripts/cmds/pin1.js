@@ -1,27 +1,23 @@
 const axios = require('axios');
-const fs = require('fs-extra');
-const path = require('path');
 
 module.exports = {
     config: {
         name: "pin",
-        aliases: ["pinterest"],
+        aliases: ["pin"],
         version: "1.0",
         author: "Dipto",
         countDown: 15,
         role: 0,
-        shortDescription: "Pinterest Image Search",
-        longDescription: "Pinterest Image Search",
-        category: "download",
+        shortDescription: "Pinterest Image Search",category: "download",
         guide: {
             en: "{pn} query"
         }
     },
 
     onStart: async function ({ api, event, args }) {
-        const queryAndLength = args.join(" ").split("-");
+        const queryAndLength = args.join(" ").split(/\s*-\s*/);
         const q = queryAndLength[0].trim();
-        const length = queryAndLength[1].trim();
+        const length = queryAndLength[1].trim() || 2;
 
         if (!q || !length) {
             return api.sendMessage("❌| Wrong Format", event.threadID, event.messageID);
@@ -29,30 +25,25 @@ module.exports = {
 
         try {
             const w = await api.sendMessage("Please wait...", event.threadID);
-            const response = await axios.get(`https://nobs-api.onrender.com/dipto/pinterest?search=${encodeURIComponent(q)}&limit=${encodeURIComponent(length)}`);
+            const response = await axios.get(`${global.GoatBot.config.api}/pinterest?search=${encodeURIComponent(q)}&limit=${encodeURIComponent(length)}`);
             const data = response.data.data;
 
             if (!data || data.length === 0) {
                 return api.sendMessage("Empty response or no images found.", event.threadID, event.messageID);
             }
 
-            const diptoo = [];
             const totalImagesCount = Math.min(data.length, parseInt(length));
-
-            for (let i = 0; i < totalImagesCount; i++) {
-                const imgUrl = data[i];
-                const imgResponse = await axios.get(imgUrl, { responseType: 'arraybuffer' });
-                const imgPath = path.join(__dirname, 'dvassests', `${i + 1}.jpg`);
-                await fs.outputFile(imgPath, imgResponse.data);
-                diptoo.push(fs.createReadStream(imgPath));
-            }
+              const attachment = await Promise.all(data.map(async (imgURL) => {
+                const imgStream = await global.utils.getStreamFromURL(imgURL);
+                return imgStream;
+              }));
 
             await api.unsendMessage(w.messageID);
             await api.sendMessage({
                 body: `
 ✅ | Here's Your Query Based images
 🐤 | Total Images Count: ${totalImagesCount}`,
-                attachment: diptoo
+                attachment
             }, event.threadID, event.messageID);
         } catch (error) {
             console.error(error);
