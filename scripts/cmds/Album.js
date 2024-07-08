@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "album2",
+  name: "album",
   author: "A6Y",
   category: "video sender"
 }
