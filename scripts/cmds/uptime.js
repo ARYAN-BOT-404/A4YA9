@@ -2,7 +2,8 @@ const axios = require("axios")
 module.exports.config = {
   name: "uptime",
   author: " Romim",
-  version: "2.0.0"
+  version: "2.0.0",
+	category: "running time"
 }
 module.exports.onStart = async ({api,event}) => {
   try {
