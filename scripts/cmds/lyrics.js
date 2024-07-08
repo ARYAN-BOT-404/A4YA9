@@ -2,7 +2,8 @@ const axios = require("axios");
 module.exports.config = {
   name: "lyrics",
   author: "A6y",
-  version: "1.0.0"
+  version: "1.0.0",
+  category: "song to text"
 }
 module.exports.onStart = async ({api,event,args}) => {
   try {
