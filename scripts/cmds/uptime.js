@@ -1,4 +1,8 @@
 const axios = require("axios")
+const moment = require('moment-timezone');
+const os = require('os');
+const si = require('systeminformation');
+const { performance } = require('perf_hooks');
 module.exports.config = {
   name: "uptime",
   author: " Romim",
