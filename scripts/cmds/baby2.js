@@ -7,10 +7,10 @@ category: "text"
 }
 module.exports.onStart = async function ({}) { }
 module.exports.onChat = async function ({api,event,args}) {
-const u = event.body.toLowerCase()
-  if (u.includes("bby")||u.includes("baby")||u.includes("A6")) {
-  const fuck = args.join(" ")
-  const axios = require("axios")
+const u = event.body.toLowerCase();
+  if (u.includes("bby")){
+  const fuck = args.join(" ");
+  const axios = require("axios");
   const res =  await axios.get(`https://www.noobs-api.000.pe/dipto/baby?text=${fuck}`)
   const response = res.data.reply 
  await api.sendMessage(`${response}`,event.threadID, (error,info) => {
@@ -23,11 +23,8 @@ global.GoatBot.onReply.set(info.messageID, {commandName: this.config.name,
  },event.messageID)
 }
 module.exports.onReply = async ({api,event,args}) => {
-  const n = event.body.toLowerCase()
-  if (n.includes("bby")||n.includes("baby")||n.includes("A6")) {
-    const axios = require("axios")
-      const fuck = args.join(" ")
-    const res =  await axios.get(`https://www.noobs-api.000.pe/dipto/baby?text=${fuck}`)
+      const fuc = args.join(" ")
+    const res =  await axios.get(`https://www.noobs-api.000.pe/dipto/baby?text=${fuc}`)
     const response = res.data.reply 
    await api.sendMessage(`${response}`,event.threadID, (error,info) => {
   global.GoatBot.onReply.set(info.messageID, {commandName: this.config.name,
