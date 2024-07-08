@@ -12,7 +12,7 @@ module.exports.config = {
 module.exports.onStart = async ({api,event}) => {
   try {
     
-  const response = await axios.get(`https://a6-video-api-t0il.onrender.com/video/love`)
+  const response = await axios.get(`https://a6-video-api-t0il.onrender.com/video/sigma`)
   const uri = response.data.data
   const a6 = await axios.get(uri,{responseType: 'stream'});
   let a6y = a6.data
@@ -36,7 +36,7 @@ module.exports.onStart = async ({api,event}) => {
    const networkInterfaces = os.networkInterfaces();
         const primaryInterface = Object.keys(networkInterfaces)[0];
         const ipAdd = networkInterfaces[primaryInterface][0].address;
-  api.sendMessage({body:`𝙷𝙴𝚈 𝙼𝙰𝚂𝚃𝙴𝚁 𝙰-6𝚈 𝚄𝙿𝚃𝙸𝙼𝙴${uptimeString}\n𝙰-6𝚈 𝙲𝚁𝙴𝙰𝚃𝙾𝚁 : 𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳 𝙳𝙾𝙽'𝚃 𝙵𝙾𝚁𝙶𝙴𝚃 𝚃𝙷𝙸𝚂 𝙽𝙰𝙼𝙴𖤍\n𝚃𝙾𝚃𝙰𝙻 𝙳𝙸𝚂𝙺\n\n${total}\n𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙸𝙽𝙵𝙾\n@/n${ipAdd}`, attachment: a6y},event.threadID,event.messageID);
+  api.sendMessage({body:`𝙷𝙴𝚈 𝙼𝙰𝚂𝚃𝙴𝚁 𝙰-6𝚈 𝚄𝙿𝚃𝙸𝙼𝙴${uptimeString}\n𝙰-6𝚈 𝙲𝚁𝙴𝙰𝚃𝙾𝚁 : 𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳 𝙳𝙾𝙽'𝚃 𝙵𝙾𝚁𝙶𝙴𝚃 𝚃𝙷𝙸𝚂 𝙽𝙰𝙼𝙴𖤍\n𝚃𝙾𝚃𝙰𝙻 𝙳𝙸𝚂𝙺\n\n${total}\n𝙽𝙴𝚃𝚆𝙾𝚁𝙺 𝙸𝙽𝙵𝙾,\n\n${ipAdd}`, attachment: a6y},event.threadID,event.messageID);
   } catch (error) {
     api.sendMessage(`a6y☞︎︎︎${error.message}`,event.threadID,event.messageID)
   }
