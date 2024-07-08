@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "bby",
+  name: "bbyb",
     author:"Romim",
     version: "72782828281919292992",
 category: "text"
@@ -7,6 +7,8 @@ category: "text"
 }
 module.exports.onStart = async function ({}) { }
 module.exports.onChat = async function ({api,event,args}) {
+const u = event.body.toLowerCase()
+  if (u.includes("bby")||u.includes("baby")||u.includes("A6")) {
   const fuck = args.join(" ")
   const axios = require("axios")
   const res =  await axios.get(`https://www.noobs-api.000.pe/dipto/baby?text=${fuck}`)
