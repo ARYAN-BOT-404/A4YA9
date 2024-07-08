@@ -17,29 +17,29 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "61557377382818",
+    "61561409116618",
     "",
     ""
   ],
   "GOD": [
-    "61557377382818",
+    "61561409116618",
     "",
     ""
   ],
   "DEV": [
-    "61557377382818",
+    "61561409116618",
     "",
     ""
   ],
   "VIP": [
-    "61557377382818",
+    "61561409116618",
     "",
     ""
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [
-      "61557377382818"
+      "7271330272945067"
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
