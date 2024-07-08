@@ -1,3 +1,4 @@
+const axios = require("axios");
 module.exports.config = {
   name: "bbyb",
     author:"Romim",
@@ -10,7 +11,6 @@ module.exports.onChat = async function ({api,event,args}) {
 const u = event.body.toLowerCase();
   if (u.includes("bby")){
   const fuck = args.join(" ");
-  const axios = require("axios");
   const res =  await axios.get(`https://www.noobs-api.000.pe/dipto/baby?text=${fuck}`)
   const response = res.data.reply 
  await api.sendMessage(`${response}`,event.threadID, (error,info) => {
