@@ -47,8 +47,8 @@
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Your Baby",
-  "prefix": "!",
+  "nickNameBot": "Your chocolate🍫",
+  "prefix": "*",
   "api": "https://www.noobs-api.000.pe/dipto",
   "database": {
     "type": "mongodb",
