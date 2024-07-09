@@ -160,18 +160,10 @@
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
   },
   "whiteListModeThread": {
-    "enable": true,
+    "enable": false,
     "whiteListThreadIds": [
-      "6136994519758980",
-      "24974557655524033",
-      "5815155225247798",
-      "7329472667111053",
-      "7410289285719481",
-      "8086368988072742",
-      "25483193801279207",
-      "7369006106528343",
-      "7559529517478926",
-      "7678480192268096"
+      "7271330272945067",
+      ""
     ],
     "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
     "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
