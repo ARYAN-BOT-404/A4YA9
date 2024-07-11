@@ -102,7 +102,7 @@ module.exports.onLoad = async ({ api }) => {
       });
     }
     const now = new Date();
-    const delay = 1000 - now.getMilliseconds(); 
+    const delay = 1200 - now.getMilliseconds(); 
     setTimeout(checkTimeAndSendMessage, delay); 
   };
   checkTimeAndSendMessage();
