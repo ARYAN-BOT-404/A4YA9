@@ -5,23 +5,20 @@ module.exports = {
     name: "accept",
     aliases: ['acp'],
     version: "1.0",
-    author: "",
-    countDown: 5,
+    author: "Loid Butter",
+    countDown: 8,
     role: 2,
-    shortDescription: "accept users friend requests",
-    longDescription: "accept users friend requests",
+    shortDescription: "accept users",
+    longDescription: "accept users",
     category: "Utility",
   },
 
   onReply: async function ({ message, Reply, event, api, commandName }) {
-    const permission = global.GoatBot.config.GOD;
-  if (!permission.includes(event.senderID)) {
-    api.sendMessage("You don't have enough permission to use this command. Only My Authors Have Access.", event.threadID, event.messageID);
-    return;
-  }
-    const { author, listRequest } = Reply;
+    const { author, listRequest, messageID } = Reply;
     if (author !== event.senderID) return;
     const args = event.body.replace(/ +/g, " ").toLowerCase().split(" ");
+
+    clearTimeout(Reply.unsendTimeout); // Clear the timeout if the user responds within the countdown duration
 
     const form = {
       av: api.getCurrentUserID(),
@@ -43,11 +40,13 @@ module.exports = {
     if (args[0] === "add") {
       form.fb_api_req_friendly_name = "FriendingCometFriendRequestConfirmMutation";
       form.doc_id = "3147613905362928";
-    } else if (args[0] === "del") {
+    }
+    else if (args[0] === "del") {
       form.fb_api_req_friendly_name = "FriendingCometFriendRequestDeleteMutation";
       form.doc_id = "4108254489275063";
-    } else {
-      return api.sendMessage("Please select <add | del> <target number | all>", event.threadID);
+    }
+    else {
+      return api.sendMessage("Please select <add | del > <target number | or \"all\">", event.threadID, event.messageID);
     }
 
     let targetIDs = args.slice(1);
@@ -64,7 +63,7 @@ module.exports = {
     for (const stt of targetIDs) {
       const u = listRequest[parseInt(stt) - 1];
       if (!u) {
-        failed.push(`Can't find stt ${stt}`);
+        failed.push(`Can't find stt ${stt} in the list`);
         continue;
       }
       form.variables.input.friend_requester_id = u.node.id;
@@ -80,15 +79,24 @@ module.exports = {
         const friendRequest = await promiseFriends[i];
         if (JSON.parse(friendRequest).errors) {
           failed.push(newTargetIDs[i].node.name);
-        } else {
+        }
+        else {
           success.push(newTargetIDs[i].node.name);
         }
-      } catch (e) {
+      }
+      catch (e) {
         failed.push(newTargetIDs[i].node.name);
       }
     }
 
-    api.sendMessage(`» The ${args[0] == 'add' ? 'friend request' : 'friend request deletion'} has been processed for ${success.length} people:\n${success.join("\n")}${failed.length > 0 ? `\n\nThe following ${failed.length} people encountered errors:\n${failed.join("\n")}` : ""}`, event.threadID, event.messageID);
+    if (success.length > 0) {
+      api.sendMessage(`» The ${args[0] === 'add' ? 'friend request' : 'friend request deletion'} has been processed for ${success.length} people:\n\n${success.join("\n")}${failed.length > 0 ? `\n» The following ${failed.length} people encountered errors: ${failed.join("\n")}` : ""}`, event.threadID, event.messageID);
+    } else {
+      api.unsendMessage(messageID); // Unsend the message if the response is incorrect
+      return api.sendMessage("Invalid response. Please provide a valid response.", event.threadID);
+    }
+
+    api.unsendMessage(messageID); // Unsend the message after it has been processed
   },
 
   onStart: async function ({ event, api, commandName }) {
@@ -106,16 +114,19 @@ module.exports = {
       i++;
       msg += (`\n${i}. Name: ${user.node.name}`
         + `\nID: ${user.node.id}`
-        + `\nURL: ${user.node.url.replace("www.facebook", "fb")}`
-        + `\nTime: ${moment(user.time * 1000).tz("Asia/Kathmandu").format("DD/MM/YYYY HH:mm:ss")}\n`);
+        + `\nUrl: ${user.node.url.replace("www.facebook", "fb")}`
+        + `\nTime: ${moment(user.time * 1009).tz("Asia/Manila").format("DD/MM/YYYY HH:mm:ss")}\n`);
     }
-    api.sendMessage(`${msg}\nReply to this message with content: <add | del> <target number | all>`, event.threadID, (e, info) => {
+    api.sendMessage(`${msg}\nReply to this message with content: <add | del> <comparison | or "all"> to take action`, event.threadID, (e, info) => {
       global.GoatBot.onReply.set(info.messageID, {
         commandName,
         messageID: info.messageID,
         listRequest,
         author: event.senderID,
+        unsendTimeout: setTimeout(() => {
+          api.unsendMessage(info.messageID); // Unsend the message after the countdown duration
+        }, this.config.countDown * 20000) // Convert countdown duration to milliseconds
       });
     }, event.messageID);
-  },
+  }
 };
