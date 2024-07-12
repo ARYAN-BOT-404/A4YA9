@@ -46,8 +46,8 @@ module.exports = {
 
       Object.keys(categories).forEach((category) => {
         if (category !== "info") {
-          msg += `\n♕︎════════♔︎═════════♕︎\n  ${category.toUpperCase()}
-\n♕︎════════♔︎═════════♕︎\n`;
+          msg += `\n✈︎⌨︎\n  ${category.toUpperCase()}
+\n𖨆ꕥ\n`;
 
 
           const names = categories[category].commands.sort();
