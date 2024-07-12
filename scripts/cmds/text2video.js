@@ -6,7 +6,7 @@ module.exports = {
         name: 'text2video',
         aliases: [],
         version: "1.6.9",
-        author: "dipto",
+        author: "sai",
         role: 0,
         countDown: 2,
         category: "Media",
