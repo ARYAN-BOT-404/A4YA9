@@ -14,7 +14,7 @@ module.exports.onStart = async function ({ message,args}) {
   const t = encodeURIComponent(args.slice(1).join(" "));
   const number = args[0];
  if(args[0] === 'list'){
-      const response = await axios.get(`https://nobs-api.onrender.com/dipto/font?list=all`);
+      const response = await axios.get(`${global.api.dipto}/font?list=all`);
       const result = response.data;
       await message.reply(result); 
    return
@@ -22,7 +22,7 @@ module.exports.onStart = async function ({ message,args}) {
       return message.reply('Invalid command. Usage: font <number> <text> ');
  }
     try {
-      const response = await axios.get(`https://nobs-api.onrender.com/dipto/font?message=${t}&number=${number}`);
+      const response = await axios.get(`${global.api.dipto}/font?message=${t}&number=${number}`);
       const result = response.data;
       await message.reply(result.data);
     } catch (error) {
