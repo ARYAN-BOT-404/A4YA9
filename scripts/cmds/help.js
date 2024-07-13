@@ -8,20 +8,10 @@ const doNotDelete = "\n♕︎════════♔︎═══════
 module.exports = {
   config: {
     name: "help",
-    version: "1.17",
+    version: "00000000000000000000/",
     author: "A6y", 
-    countDown: 5,
     role: 0,
-    shortDescription: {
-      en: "View command usage and list all commands directly",
-    },
-    longDescription: {
-      en: "View command usage and list all commands directly",
-    },
     category: "info",
-    guide: {
-      en: "{pn} / help cmdName ",
-    },
     priority: 1,
   },
 
@@ -34,7 +24,7 @@ module.exports = {
       const categories = {};
       let msg = "";
 
-      msg += ``; // replace with your name 
+      msg += ``; //A6Y you change author then i fuck you
 
       for (const [name, value] of commands) {
         if (value.config.role > 1 && role < value.config.role) continue;
@@ -46,13 +36,12 @@ module.exports = {
 
       Object.keys(categories).forEach((category) => {
         if (category !== "info") {
-          msg += `\n✈︎⌨︎\n  ${category.toUpperCase()}
-\n𖨆ꕥ\n`;
+          msg += ``;
 
 
           const names = categories[category].commands.sort();
           for (let i = 0; i < names.length; i += 3) {
-            const cmds = names.slice(i, i + 2).map((item) => `⭔${item}`);
+            const cmds = names.slice(i, i + 2).map((item) => `${item}`);
             msg += `\n│${cmds.join(" ".repeat(Math.max(1, 5 - cmds.join("").length)))}`;
           }
 
@@ -61,17 +50,17 @@ module.exports = {
       });
 
       const totalCommands = commands.size;
-      msg += `\n\n╭──────────────➣\n\n𝙸 𝙷𝙰𝚅𝙴  ${totalCommands} 𝙲𝙼𝙳𝚂\n𝚃𝚈𝙿𝙴 ☞︎︎︎${prefix}𝙷𝙴𝙻𝙿 𝚃𝙾 𝚅𝙸𝙴𝚆 𝙰-6𝚈 𝙰𝙻𝙻 𝙲𝙼𝙳\n𝙰𝙽𝙳 𝙻𝙴𝙰𝚁𝙽 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙰-6𝚈 𝙲𝙼𝙳\n➪☁︎╰──────────────➣`;
+      msg += `\n\n╭────────────➣\n\n𝙸 𝙷𝙰𝚅𝙴  ${totalCommands} 𝙲𝙼𝙳𝚂\n𝚃𝚈𝙿𝙴 ☞︎︎︎${prefix} 𝙷𝙴𝙻𝙿 𝚃𝙾 𝚅𝙸𝙴𝚆 𝙰-6𝚈 𝙰𝙻𝙻 𝙲𝙼𝙳\n𝙰𝙽𝙳 𝙻𝙴𝙰𝚁𝙽 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙰-6𝚈 𝙲𝙼𝙳\n➪☁︎╰──────────────➣`;
       msg += ``;
       msg += `\n╭──────────────➣\n𝙰-6𝚈 𝙱𝙾𝚃 𝙲𝚁𝙴𝙰𝚃𝙾𝚃 𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳 ❄︎\n
 ╰──────────────➣`; 
 
-      const imageUrl = "https://i.imgur.com/YQ3crgK.jpeg"; 
-
+      const imageUrl = "https://a6-video-api-t0il.onrender.com/video/sigma"; 
+       const u = imageUrl.data.data
       await message.reply({
         body: msg,
         attachment: await axios({
-          url: imageUrl,
+          url: u,
           method: "GET",
           responseType: "stream",
         }).then((response) => response.data),
