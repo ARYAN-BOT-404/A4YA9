@@ -1,45 +1,67 @@
 const axios = require('axios');
 const fs = require('fs');
-const { get } = require('request-promise');
 
 module.exports = {
   config: {
-    name: 'imagine',
-    aliases: [],
-    version: '1.0',
-    author: 'kshitiz',
-    countDown: 10,
+    name: "imagine",
+    version: "1.2",
+    author: "ArYAN",
+    countDown: 0,
     role: 0,
-    shortDescription: 'Generate an image.',
-    longDescription: 'Generate an image.',
-    category: 'fun',
-    guide: '{pn}[prompt | model]',
+    shortDescription: {
+      en: 'Generate images.'
+    },
+    longDescription: {
+      en: "This command uses an external API to create images"
+    },
+    category: "media",
+    guide: {
+      en: "{p}imagine <prompt>"
+    }
   },
 
-  onStart: async function ({ api, args, message, event }) {
-    let path = __dirname + '/cache/image.png';
-    const tzt = args.join(' ').split('|').map(item => item.trim());
-    let txt = tzt[0];
-    let txt2 = tzt[1];
-
-    let tid = event.threadID;
-    let mid = event.messageID;
-
-    if (!args[0] || !txt || !txt2) {
-      return api.sendMessage('Please provide a prompt and a model.', tid, mid);
-    }
-
+  onStart: async function({ message, args, api, event }) {
     try {
-      api.sendMessage('⏳ Generating...', tid, mid);
+      const prompt = args.join(" ");
+      if (!prompt) {
+        return message.reply("Please provide a prompts");
+      }
 
-      let enctxt = encodeURIComponent(txt);
-      let url = `https://arjhil-prodia-api.arjhilbard.repl.co/generate?prompt=${enctxt}&model=${txt2}`;
+      api.setMessageReaction("⏰", event.messageID, () => {}, true);
 
-      let result = await axios.get(url, { responseType: 'arraybuffer' });
-      fs.writeFileSync(path, result.data);
-      api.sendMessage({ attachment: fs.createReadStream(path) }, tid, () => fs.unlinkSync(path), mid);
-    } catch (e) {
-      return api.sendMessage(e.message, tid, mid);
+      const startTime = new Date().getTime();
+    
+      const baseURL = `https://global-sprak.onrender.com/api/imagine`;
+      const params = {
+        prompt: prompt,
+      };
+
+      const response = await axios.get(baseURL, {
+        params: params,
+        responseType: 'stream'
+      });
+
+      const endTime = new Date().getTime();
+      const timeTaken = (endTime - startTime) / 1000;
+
+      api.setMessageReaction("✅", event.messageID, () => {}, true);
+
+      const fileName = 'segs.png'; // Adjust file name and extension as per your API response
+      const filePath = `/tmp/${fileName}`; // Example path, adjust as necessary
+
+      const writerStream = fs.createWriteStream(filePath);
+      response.data.pipe(writerStream);
+
+      writerStream.on('finish', function() {
+        message.reply({
+          body: ``,
+          attachment: fs.createReadStream(filePath)
+        });
+      });
+
+    } catch (error) {
+      console.error('Error generating image:', error);
+      message.reply("❌ Failed to generate your image.");
     }
-  },
+  }
 };
