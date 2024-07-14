@@ -9,9 +9,9 @@ category: "text"
 module.exports.onStart = async function ({}) { }
 module.exports.onChat = async function ({api,event,args}) {
 const u = event.body.toLowerCase();
-  if (u.includes("bby")||u.includes("bot")){
+  if (u.startsWith("bby")||u.startsWith("bot")){
   const fuck = args.join(" ");
-  const res =  await axios.get(`https://www.noobs-api.000.pe/dipto/baby?text=${fuck}`)
+  const res =  await axios.get(`${global.GoatBot.config.api}/baby?text=${fuck}`)
   const response = res.data.reply 
  await api.sendMessage(`${response}`,event.threadID, (error,info) => {
 global.GoatBot.onReply.set(info.messageID, {commandName: this.config.name,
@@ -24,7 +24,7 @@ global.GoatBot.onReply.set(info.messageID, {commandName: this.config.name,
 }
 module.exports.onReply = async ({api,event,args}) => {
       const fuc = args.join(" ")
-    const res =  await axios.get(`https://www.noobs-api.000.pe/dipto/baby?text=${fuc}`)
+    const res =  await axios.get(`${global.GoatBot.config.api}/baby?text=${fuc}`)
     const response = res.data.reply 
    await api.sendMessage(`${response}`,event.threadID, (error,info) => {
   global.GoatBot.onReply.set(info.messageID, {commandName: this.config.name,
