@@ -1,6 +1,6 @@
 module.exports = {
 	config: {
-		name: "shisui",
+		name: "Itachi",
 		aliases: ["shi"],
 		version: "1.0",
 		author: "ʬɸʬ Shïsûį Dånïęl ʬɸʬ", // do not change this credits
