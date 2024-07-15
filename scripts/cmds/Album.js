@@ -50,79 +50,79 @@ module.exports.onReply = async ({ api, event, Reply }) => {
 
       switch (a61) {
         case 1:
-          r4m1m1 = "${global.GoatBot.config.a6y}/football";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/football";
           break;
         case 2:
-          r4m1m1 = "${global.GoatBot.config.a6y}/messi";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/messi";
           break;
         case 3:
-          r4m1m1 = "${global.GoatBot.config.a6y}/neymar";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/Neymar";
           break;
         case 4:
-          r4m1m1 = "${global.GoatBot.config.a6y}/cr7";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/cr7";
           break;
         case 5:
-          r4m1m1 = "${global.GoatBot.config.a6y}/editff";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/editff";
           break;
         case 6:
-          r4m1m1 = "${global.GoatBot.config.a6y}/sadff";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/sadff";
           break;
         case 7:
-          r4m1m1 = "${global.GoatBot.config.a6y}/white01";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/white01";
           break;
         case 8:
-          r4m1m1 = "${global.GoatBot.config.a6y}/ff";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/ff";
           break;
         case 9:
-          r4m1m1 = "${global.GoatBot.config.a6y}/m1nx";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/m1nx";
           break;
         case 10:
-          r4m1m1 = "${global.GoatBot.config.a6y}/sakib";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/sakib";
           break;
         case 11:
-          r4m1m1 = "${global.GoatBot.config.a6y}/sigma";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/sigma";
           break;
         case 12:
-          r4m1m1 = "${global.GoatBot.config.a6y}/islamic";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/islamic";
           break;
         case 13:
-          r4m1m1 = "${global.GoatBot.config.a6y}/adnan";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/adnan";
           break;
         case 14:
-          r4m1m1 = "${global.GoatBot.config.a6y}/love";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/love";
           break;
         case 15:
-          r4m1m1 = "${global.GoatBot.config.a6y}/status";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/status";
           break;
         case 16:
-          r4m1m1 = "${global.GoatBot.config.a6y}/horny";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/horny";
           break;
 case 17:
-          r4m1m1 = "${global.GoatBot.config.a6y}/lyrics";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/lyrics";
           break;
 case 18:
-          r4m1m1 = "${global.GoatBot.config.a6y}/aesthetic";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/aesthetic";
           break;
 case 19:
-          r4m1m1 = "${global.GoatBot.config.a6y}/car";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/car";
           break;
 case 20:
-          r4m1m1 = "${global.GoatBot.config.a6y}/anime";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/anime";
           break;
 case 21:
-          r4m1m1 = "${global.GoatBot.config.a6y}/arise";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/arise";
           break;
 case 22:
-          r4m1m1 = "${global.GoatBot.config.a6y}/madara";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/madara";
           break;
 case 23:
-          r4m1m1 = "${global.GoatBot.config.a6y}/naruto";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/naruto";
           break;
 case 25:
-          r4m1m1 = "${global.GoatBot.config.a6y}/phonk";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/phonk";
           break;
 case 26:
-          r4m1m1 = "${global.GoatBot.config.a6y}/girl";
+          r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/girl";
           break;
 
         default:
