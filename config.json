@@ -51,7 +51,7 @@
   "prefix": "*",
   "api": "https://www.noobs-api.000.pe",
   "api2": "https://www.noobs-api.000.pe/dipto",
-  "a6y" : "https://a6-video-api-t0il.onrender.com",
+  "a6y" : "https://a6-video-api-t0il.onrender.com/Romim",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
