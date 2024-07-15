@@ -1,4 +1,4 @@
- module.exports.config = {
+module.exports.config = {
   name: "album",
   author: "A6Y",
   category: "video sender"
@@ -118,10 +118,10 @@ case 22:
 case 23:
           r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/naruto";
           break;
-case 25:
+case 24:
           r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/phonk";
           break;
-case 26:
+case 25:
           r4m1m1 = "https://a6-video-api-t0il.onrender.com/video/girl";
           break;
 
@@ -135,7 +135,7 @@ case 26:
       const video1 = await axios.get(url1, { responseType: 'stream' });
       const uri1 = resp.data.count;
       const rm1 = video1.data;
-      api.sendMessage({ body: `𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙰6𝚈 𝙰𝙿𝙸 𝚂𝙴𝙽𝙳 𝚈𝙾𝚄𝚁 𝙰𝙻𝙱𝚄𝙼 𝚅𝙸𝙳𝙴𝙾  𝙰𝙽𝙳 𝚅𝙸𝙵𝙴𝙾 𝙲𝙾𝚄𝙽𝚃 [ ${uri1} ]`, attachment: rm1 }, event.threadID, event.messageID);
+      api.sendMessage({ body: `𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝙰6𝚈 𝙰𝙿𝙸 𝚂𝙴𝙽𝙳 𝚈𝙾𝚄𝚁 𝙰𝙻𝙱𝚄𝙼 𝚅𝙸𝙳𝙴𝙾  𝙰𝙽𝙳 𝚅𝙸𝙳𝙴𝙾 𝙲𝙾𝚄𝙽𝚃 [ ${uri1} ]`, attachment: rm1 }, event.threadID, event.messageID);
     }
   } catch (error) {
     api.sendMessage(`Error: ${error.message}`, event.threadID, event.messageID);
