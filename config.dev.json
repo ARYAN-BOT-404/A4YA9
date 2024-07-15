@@ -50,7 +50,7 @@
   "nickNameBot": "Your chocolate🍫",
   "prefix": "*",
   "api": "https://www.noobs-api.000.pe/dipto",
-  "a6y": "https://a6-video-api-t0il.onrender.com/Romim",
+  "a6y": "https://a6-video-api-t0il.onrender.com/video",
   "database": {
     "type": "mongodb",
     "uriMongodb": "mongodb+srv://bbyhotchocolate:cvLej4X0dE69GyA8@cluster0.n2oujft.mongodb.net/GoatBotVersion22?retryWrites=true&w=majority",
