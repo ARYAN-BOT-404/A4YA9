@@ -7,7 +7,7 @@ const doNotDelete = "\n♕︎════════♔︎═══════
 
 module.exports = {
   config: {
-    name: "help",
+    name: "menu",
     version: "00000000000000000000/",
     author: "A6y", 
     role: 0,
