@@ -35,20 +35,20 @@
     "ignoreCommand": []
   },
   "adminBot": [
-  "61561409116618",
-    "61561579538077"
+  "61564523816700",
+    ""
 ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [
-      "61561409116618",
-      "61561579538077",
+      "61564523816700",
+      "",
       ""
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Your chocolate🍫",
-  "prefix": "*",
+  "nickNameBot": "Ar Yan🍫",
+  "prefix": ".",
   "api": "https://www.noobs-api.000.pe",
   "api2": "https://www.noobs-api.000.pe/dipto",
   "a6y" : "https://a6-video-api-t0il.onrender.com/Romim",
@@ -164,7 +164,6 @@
   "whiteListModeThread": {
     "enable": false,
     "whiteListThreadIds": [
-      "7271330272945067",
       ""
     ],
     "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
