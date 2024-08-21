@@ -3,87 +3,68 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "[ 🌟 | 𝗔𝗥𝗬𝗔𝗡-𝗕𝗢𝗧 ]";
+const doNotDelete = "\n⊙════════♔︎═════════⊙\n ArYan LIST 𓇽"; // changing this wont change the goatbot V2 of list cmd it is just a decoyy
 
 module.exports = {
   config: {
     name: "help",
-    version: "1.17",
-    author: "ARYAN", //**orginal author fb I'd : https://m.me/NOOBS.DEVELOPER.AYAN **//
-    countDown: 5,
+    version: "00000000000000000000/",
+    author: "A6y", 
     role: 0,
-    shortDescription: {
-      en: "View command usage and list all commands directly",
-    },
-    longDescription: {
-      en: "View command usage and list all commands directly",
-    },
     category: "info",
-    guide: {
-      en: "{pn} / help cmdName ",
-    },
     priority: 1,
   },
 
   onStart: async function ({ message, args, event, threadsData, role }) {
-  const { threadID } = event;
-  const threadData = await threadsData.get(threadID);
-  const prefix = getPrefix(threadID);
+    const { threadID } = event;
+    const threadData = await threadsData.get(threadID);
+    const prefix = getPrefix(threadID);
 
-  if (args.length === 0) {
+    if (args.length === 0) {
       const categories = {};
       let msg = "";
 
-      msg += `╔═══════════╗\n     𝗔𝗥𝗬𝗔𝗡-𝗕𝗢𝗧🌟\n╚═══════════╝`;
+      msg += ``; //A6Y you change author then i fuck you
 
       for (const [name, value] of commands) {
-          if (value.config.role > 1 && role < value.config.role) continue;
+        if (value.config.role > 1 && role < value.config.role) continue;
 
-          const category = value.config.category || "Uncategorized";
-          categories[category] = categories[category] || { commands: [] };
-          categories[category].commands.push(name);
+        const category = value.config.category || "Uncategorized";
+        categories[category] = categories[category] || { commands: [] };
+        categories[category].commands.push(name);
       }
 
-      Object.keys(categories).forEach(category => {
-          if (category !== "info") {
-              msg += `\n╭─╮\n│『 ${category.toUpperCase()} 』`;
+      Object.keys(categories).forEach((category) => {
+        if (category !== "info") {
+          msg += ``;
 
-              const names = categories[category].commands.sort();
-              for (let i = 0; i < names.length; i += 3) {
-                  const cmds = names.slice(i, i + 3).map(item => `✧${item}`);
-                  msg += `\n│${cmds.join(" ".repeat(Math.max(1, 10 - cmds.join("").length)))}`;
-              }
 
-              msg += `\n╰────────────ꔪ`;
+          const names = categories[category].commands.sort();
+          for (let i = 0; i < names.length; i += 3) {
+            const cmds = names.slice(i, i + 2).map((item) => `${item}`);
+            msg += `╭─⊙\n│${cmds.join(" ".repeat(Math.max(1, 5 - cmds.join("").length)))}`;
           }
+
+          msg += `\n╰────────────⊙`;
+        }
       });
 
       const totalCommands = commands.size;
-      msg += `\n𝗖𝘂𝗿𝗿𝗲𝗻𝘁𝗹𝘆, 𝘁𝗵𝗲 𝗯𝗼𝘁 𝗵𝗮𝘀 ${totalCommands} 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀 𝘁𝗵𝗮𝘁 𝗰𝗮𝗻 𝗯𝗲 𝘂𝘀𝗲𝗱\n`;
-      msg += `𝗧𝘆𝗽𝗲 ${prefix}𝗵𝗲𝗹𝗽 [𝗔𝗥𝗬𝗔𝗡-𝗕𝗢𝗧] 𝘁𝗼 𝘃𝗶𝗲𝘄 𝘁𝗵𝗲 𝗱𝗲𝘁𝗮𝗶𝗹𝘀 𝗼𝗳 𝘁𝗵𝗮𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱\n`;
-      msg += `🌟 | 𝗔𝗥𝗬𝗔𝗡-𝗕𝗢𝗧 `;
+      msg += `\n\n╭─⊙\n\nI HAVE ${totalCommands} CMD\nTYPE ☞︎︎︎${prefix}Hello to view ArYan all cmd\nand learn how to use ArYan cmd \n➪☁︎╰────────────⊙`;
+      msg += ``;
+      msg += `\n╭────────────⊙\nAr Yan CREATOR ☞︎︎︎ArYan RAJ❄︎\n
+╰────────────⊙`; 
 
-
-      const helpListImages = [
-        "https://i.imgur.com/L4nLUbr.jpeg", // add image link here
-        "",
-        "",
-        ",
-        ",
-        ",
-        ",
-        // Add more image links as needed
-      ];
-
-
-      const helpListImage = helpListImages[Math.floor(Math.random() * helpListImages.length)];
-
-
+      const imageUrl = "http://g-v1.onrender.com/X4qy4epvFn.mp4"; 
       await message.reply({
-          body: msg,
-          attachment: await global.utils.getStreamFromURL(helpListImage)
+        body: msg,
+        attachment: await axios({
+          url: imageUrl,
+          method: "GET",
+          responseType: "stream",
+        }).then((response) => response.data),
       });
-  } else {
+    } else {
       const commandName = args[0].toLowerCase();
       const command = commands.get(commandName) || commands.get(aliases.get(commandName));
 
@@ -99,24 +80,19 @@ module.exports = {
         const guideBody = configCommand.guide?.en || "No guide available.";
         const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
 
-        const response = `━━━━━━━━━━━━━━━━━♡
-   
-   ➢  ♡𝐍𝐀𝐌𝐄♡ 
-    ➠${configCommand.name}
-   ➢ 𝙄𝙉𝙁𝙊
-    
-     ➠𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻 : ${longDescription}
-     ➠𝗼𝘁𝗵𝗲𝗿 𝗻𝗮𝗺𝗲𝘀 : ${configCommand.aliases ? configCommand.aliases.join(", ") : "Do not have"}
-    Other names in your group:  Do not have
-     ➠𝗔𝘂𝘁𝗵𝗼𝗿: ${author}
-     ➠𝗩𝗲𝗿𝘀𝗶𝗼𝗻 : ${configCommand.version || "1.0"}
-     ➠𝗥𝗼𝗹𝗲 : ${roleText}
-     ➠𝗧𝗶𝗺𝗲 𝗽𝗲𝗿 𝗰𝗼𝗺𝗺𝗮𝗱: ${configCommand.countDown || 1}s
-   ➢ 𝙐𝙎𝘼𝙂𝙀
-     ➠ ${usage}
-   ➢ 𝙉𝙊𝙏𝙀𝙎
-    scripts coding by 𝗔𝗿𝗬𝗮𝗻
-  ━━━━━━━━━━━━━━━━━━ꔪ`;
+        const response = `⊙════════♔︎═════════⊙
+ ⊙═══════NAME════════⊙
+
+☕︎${configCommand.name}
+
+  ☞︎︎︎𝙰-6𝚈 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽 ☞︎︎︎${longDescription}
+  ☞︎︎︎ 𝙾𝚃𝙷𝙴𝚁 𝙽𝙰𝙼𝙴 ☞︎︎︎${configCommand.aliases ? configCommand.aliases.join(", ") : "Do not have"}
+
+  ☞︎︎︎𝙰𝚄𝚃𝙷𝙾𝚁 ☞︎︎︎${author}
+  ☞︎︎︎𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ☞︎︎︎${configCommand.version || "1.0"}
+  ☞︎︎︎𝚁𝙾𝙻𝙴 ☞︎︎︎ ${roleText}
+  ☞︎︎︎𝚄𝚂𝙰𝙶𝙴 ☞︎︎︎ ${usage}
+⊙════════♔︎═════════⊙`;
 
         await message.reply(response);
       }
@@ -135,4 +111,4 @@ function roleTextToString(roleText) {
     default:
       return "Unknown role";
   }
-}
+})
