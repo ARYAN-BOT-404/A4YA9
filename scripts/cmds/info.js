@@ -15,15 +15,15 @@ module.exports = {
 		envConfig: {}
 	},
 	onStart: async function ({ message }) {
-		const botName = "𝙰-6𝚈 𝙱𝙾𝚃";
-		const botPrefix = "*";
-		const authorName = "𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳";
-		const ownAge = "++";
-		const teamName = "𝙰-6𝚈 𝚃𝙴𝙰𝙼";
-		const authorFB = "https://www.facebook.com/profile.php?id=61557377382818";
-		const authorInsta = "https://www.instagram.com/aruu.babe";
-		const tikTok = "https://www.tiktok.com/@mixxa_ff1";
-		const st = "𝙰𝙲𝚃𝙸𝚅𝙴";
+		const botName = "ᴀʀʏᴀɴ ʀᴀᴊ";
+		const botPrefix = ".";
+		const authorName = "ᴅᴀᴠɪᴅ ᴀʀʏᴀɴ";
+		const ownAge = "18";
+		const teamName = "ᴛɪᴍᴇ";
+		const authorFB = "https://www.facebook.com/ArYan.com.404";
+		const authorInsta = "ɴᴏ";
+		const tikTok = "ɴᴏ";
+		const st = "ᴀᴄᴛɪᴠᴇ";
 		const urls = JSON.parse(fs.readFileSync('a6.json'));
 		const link = urls[Math.floor(Math.random() * urls.length)];
 		const now = moment().tz('Asia/Jakarta');
@@ -35,24 +35,26 @@ module.exports = {
 		const hours = Math.floor((uptime / (60 * 60)) % 24);
 		const days = Math.floor(uptime / (60 * 60 * 24));
 		const uptimeString = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+		const img = 'https://i.imgur.com/nk8ISSx.jpeg';
 
 		message.reply({
-			body: `♕︎➪𝙰-6𝚈 𝙱𝙾𝚃  𝙸𝙽𝙵𝙾𖤍🂱
-\☢ ︎︎𝙰-6𝚈 𝙽𝙰𝙼𝙴 ☞︎︎︎ ${botName} 🂱
-\☢︎︎ 𝙰-6𝚈  𝙿𝚁𝙴𝙵𝙸𝚇 ☞︎︎︎ ${botPrefix} 𖤍
-\☢ ︎︎𝙰-6𝚈 𝙾𝚆𝙽𝙴𝚁 𝙽𝙰𝙼𝙴 ☞︎︎︎ ${authorName} ⚠︎
-\☢︎︎ 𝙰-6𝚈 𝙾𝚆𝙽𝙴𝚁 𝙰𝙶𝙴  ☞︎︎︎ ${ownAge} ⚠︎
-\☢ ︎𝙾𝚆𝙽𝙴𝚁 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 ☞︎︎︎ ${authorFB} ♧︎︎︎
-\☢ ︎︎𝙾𝚆𝙱𝙴𝚁 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼 ☞︎︎︎ ${authorInsta} ♲︎︎︎
-\☢︎︎ 𝚃𝙴𝙰𝙼 ☞︎︎︎ ${teamName} 𓀬
-\♕︎════════♔︎═════════♕︎
-
- ♲︎︎︎ 𝙰-6𝚈 𝚄𝙿𝚃𝙸𝙼𝙴 𒊹︎︎︎
- \☢ ︎︎𝙰-6𝚈 𝚁𝚄𝙽𝙽𝙸𝙽𝙶 𝚃𝙸𝙼𝙴 ☞︎︎︎ ${uptimeString} ❁
- \☢︎︎ 𝙳𝙰𝚃𝙴 ☞︎︎︎ ${date} ꕥ
- \☢ 𝙽︎︎𝙾𝚆 𝚃𝙸𝙼𝙴 ☞︎︎︎ ${time} ☔︎
- \☢︎︎ 𝚂𝚃𝙰𝚃𝚄𝚂 ☞︎︎︎ ${st}🔰
- \♕════════𖣘═════════♕︎
+			body: `ᗩᖇYᗩᑎ IᑎᖴO
+      🤖 Bot Name: ${botName}
+      🚀 Prefix: ${botPrefix}
+      👤 Owner: ${authorName}
+      🔆 Age: ${ownAge}
+      ☢️ Team: ${teamName}
+      🍒 authorFb: ${authorFB}
+      📱 insta: ${authorInsta}
+      🏠 TikTok: ${tikTok}
+      🖊️ stutes: ${st}
+      ⏱️ seconds: ${seconds}
+      🕰️ minutes: ${minutes}
+      🛸 hours: ${hours}
+      🌒 days: ${days}
+      🌧️ date: ${date}
+      ☔ Time: ${time}
+      ⏰ uptime: ${uptimeString}
  `,
 			attachment: await global.utils.getStreamFromURL(link)
 		});
