@@ -35,26 +35,25 @@ module.exports = {
 		const hours = Math.floor((uptime / (60 * 60)) % 24);
 		const days = Math.floor(uptime / (60 * 60 * 24));
 		const uptimeString = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
-		const img = 'https://i.imgur.com/nk8ISSx.jpeg';
 
 		message.reply({
-			body: `ᗩᖇYᗩᑎ IᑎᖴO
-      🤖 Bot Name: ${botName}
-      🚀 Prefix: ${botPrefix}
-      👤 Owner: ${authorName}
-      🔆 Age: ${ownAge}
-      ☢️ Team: ${teamName}
-      🍒 authorFb: ${authorFB}
-      📱 insta: ${authorInsta}
-      🏠 TikTok: ${tikTok}
-      🖊️ stutes: ${st}
-      ⏱️ seconds: ${seconds}
-      🕰️ minutes: ${minutes}
-      🛸 hours: ${hours}
-      🌒 days: ${days}
-      🌧️ date: ${date}
-      ☔ Time: ${time}
-      ⏰ uptime: ${uptimeString}
+			body: `  🍒ᗩᖇYᗩᑎ IᑎᖴO🍒  \n
+🤖 Bot Name: ${botName}
+🚀 Prefix: ${botPrefix}
+👤 Owner: ${authorName}
+🔆 Age: ${ownAge}
+☢️ Team: ${teamName}
+🍒 authorFb: ${authorFB}
+📱 insta: ${authorInsta}
+🏠 TikTok: ${tikTok}
+🖊️ stutes: ${st}
+⏱️ seconds: ${seconds}
+🕰️ minutes: ${minutes}
+🛸 hours: ${hours}
+🌒 days: ${days}
+🌧️ date: ${date}
+☔ Time: ${time}
+⏰ uptime: ${uptimeString}
  `,
 			attachment: await global.utils.getStreamFromURL(link)
 		});
