@@ -16,15 +16,15 @@ config: {
   onStart: async function ({ api, event }) {
   try {
     const ownerInfo = {
-      name: '𝚁𝙾𝙼𝙸𝙼 𝙰𝙷𝙼𝙴𝙳',
+      name: '𝙰𝚁𝚈𝙰𝙽 𝚁𝙰𝙹',
       gender: 'Male',
-      age: 'Unknown',
-      height: 'Unknown',
-      facebookLink: 'https://www.facebook.com/profile.php?id=61559283257942',
-      nick: '𝚁𝙾𝙼𝙸𝙼'
+      age: '18',
+      stutes: '𝚜𝚒𝚗𝚐𝚕𝚎',
+      facebookLink: 'https://www.facebook.com/ArYan.com.404',
+      nick: '𝙰𝚁𝚈𝙰𝙽'
     };
 
-    const bold = 'https://i.imgur.com/DDO686J.mp4'; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
+    const bold = ''; // Replace with your Google Drive videoid link https://drive.google.com/uc?export=download&id=here put your video id
 
     const tmpFolderPath = path.join(__dirname, 'tmp');
 
@@ -42,7 +42,7 @@ config: {
 𝙽𝙰𝙼𝙴: ${ownerInfo.name}
 𝙶𝙴𝙽𝙳𝙴𝚁: ${ownerInfo.gender}
 𝙰𝙶𝙴: ${ownerInfo.age}
-𝙷𝙴𝙸𝙶𝙷𝚃: ${ownerInfo.height}
+𝚂𝚃𝚄𝚃𝙴𝚂: ${ownerInfo.stutes}
 𝙵𝙰𝙲𝙴𝙱𝙾𝙻𝙺: ${ownerInfo.facebookLink}\n𝙽𝙸𝙲𝙺: ${ownerInfo.nick}
 `;
 
