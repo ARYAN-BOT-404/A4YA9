@@ -52,6 +52,7 @@
   "api": "https://www.noobs-api.000.pe",
   "api2": "https://www.noobs-api.000.pe/dipto",
   "a6y" : "https://a6-video-api-t0il.onrender.com/Romim",
+  " api": "https://xnil-apis.onrender.com/",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
