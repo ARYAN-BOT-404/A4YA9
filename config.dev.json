@@ -35,25 +35,27 @@
     "ignoreCommand": []
   },
   "adminBot": [
-  "61561409116618",
-    "61561579538077"
+  "61564523816700",
+    "61565025325331"
 ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [
-      "61561409116618",
-      "61561579538077",
+      "61564523816700",
+      "61565025325331",
       ""
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Your chocolate🍫",
-  "prefix": "*",
-  "api": "https://www.noobs-api.000.pe/dipto",
-  "a6y": "https://a6-video-api-t0il.onrender.com/video",
+  "nickNameBot": "Ar Yan🍫",
+  "prefix": ".",
+  "api": "https://www.noobs-api.000.pe",
+  "api2": "https://www.noobs-api.000.pe/dipto",
+  "a6y" : "https://a6-video-api-t0il.onrender.com/Romim",
+  " api": "https://xnil-apis.onrender.com/",
   "database": {
-    "type": "mongodb",
-    "uriMongodb": "mongodb+srv://bbyhotchocolate:cvLej4X0dE69GyA8@cluster0.n2oujft.mongodb.net/GoatBotVersion22?retryWrites=true&w=majority",
+    "type": "sqlite",
+    "uriMongodb": "",
     "autoSyncWhenStart": false,
     "autoRefreshThreadInfoFirstTime": true,
     "notes": "(1) type selects 'json' or 'sqlite' or 'mongodb'. If you choose mongodb, enter uri connect mongodb in the uriMongodb section, instructions to get uri connect mongodb at: https://youtu.be/z1f9urHW5xY. I recommend using 'mongodb' or 'sqlite', json is not recommended because it is not stable. (2) when you set autoSyncWhenStart to true, the bot will automatically synchronize the data in the database when starting the bot, this will make the bot start slower. (3) when youf set autoRefreshThreadInfoFirstTime to true, the bot will automatically refresh the thread information when get first message from the thread since starting the bot"
@@ -157,16 +159,15 @@
     "selfListen": false,
     "selfListenEvent": false,
     "autoMarkDelivery": false,
-    "autoReconnect": true,
+    "autoReconnect": false,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
   },
   "whiteListModeThread": {
     "enable": false,
     "whiteListThreadIds": [
-      "7271330272945067",
       ""
     ],
     "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
     "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
   }
-      }
+}
