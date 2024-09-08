@@ -35,25 +35,34 @@
     "ignoreCommand": []
   },
   "adminBot": [
-  "61564523816700",
+    "61564523816700",
     "61565025325331",
-    "100086126670352"
-],
+    "61564523816700"
+  ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [
-      "61564523816700",
-      "61565025325331",
+      "",
+      "",
       ""
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "Ar Yan🍫",
-  "prefix": "-",
+  "prefix": "*",
+  "xnil": "https://xnil-apis.onrender.com/",
   "api": "https://www.noobs-api.000.pe",
   "api2": "https://www.noobs-api.000.pe/dipto",
-  "a6y" : "https://a6-video-api-t0il.onrender.com/Romim",
-  " api": "https://xnil-apis.onrender.com/",
+  "a6y": "https://a6-video-api-t0il.onrender.com/Romim",
+  "authorName": "ArYan",
+  "facebook2": "https://www.facebook.com/raj.vai.404",
+  "facebook": "https://www.facebook.com/ArYan.com.404",
+  "email": "davidaryan397@gmail.com",
+  "replit": "https://replit.com/@DAVID-RAJ",
+  "github": "https://github.com/DAVID-ARYAN-RAJ/ARYAN-RAJ",
+  "insta": "no",
+  "age": "18+",
+  "TG": "",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
@@ -157,16 +166,17 @@
     "updatePresence": true,
     "listenTyping": true,
     "logLevel": "error",
-    "selfListen": false,
-    "selfListenEvent": false,
-    "autoMarkDelivery": false,
-    "autoReconnect": false,
+    "selfListen": true,
+    "selfListenEvent": true,
+    "autoMarkDelivery": true,
+    "autoReconnect": true,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
   },
   "whiteListModeThread": {
     "enable": false,
     "whiteListThreadIds": [
-      ""
+      "7271330272945067",
+      "8006025642851325"
     ],
     "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
     "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
