@@ -1,9 +1,10 @@
+const { GoatWrapper } = require("fca-liane-utils");
 module.exports = {
   config: {
     name: "profile",
-    aliases: ["pfp"],
+    aliases: ["pp"],
     version: "1.1",
-    author: "NIB",
+    author: "NIB | No prefix by ArYan",
     countDown: 5,
     role: 0,
     shortDescription: "PROFILE image",
@@ -39,4 +40,7 @@ module.exports = {
       attachment: await global.utils.getStreamFromURL(avt)
   })
   }
-};
+}
+
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });
