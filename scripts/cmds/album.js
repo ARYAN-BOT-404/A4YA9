@@ -10,7 +10,7 @@ const baseApiUrl = async () => {
 
 module.exports = {
   config: {
-    name: "alb",
+    name: "album",
     version: "1.0.0",
     role: 0,
     author: "Dipto", //Don't Change Author name.
