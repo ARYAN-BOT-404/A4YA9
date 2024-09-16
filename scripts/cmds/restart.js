@@ -1,6 +1,6 @@
 module.exports = {
 	config: {
-		name: "restart",
+		name: "rest",
 		version: "1.1",
 		author: "NTKhang",
 		countDown: 5,
@@ -40,4 +40,4 @@ module.exports = {
 		await message.reply(getLang("restartting"));
 		process.exit(2);
 	}
-};
+}
