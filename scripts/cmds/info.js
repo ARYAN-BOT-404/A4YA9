@@ -5,7 +5,7 @@ module.exports = {
 	config: {
 		name: "info",
 		version: "1.0",
-		author: "A-6y",
+		author: "ArYan",
 		countDown: 20,
 		role: 0,
 		shortDescription: { vi: "", en: "" },
@@ -24,7 +24,7 @@ module.exports = {
 		const authorInsta = "ɴᴏ";
 		const tikTok = "ɴᴏ";
 		const st = "ᴀᴄᴛɪᴠᴇ";
-		const urls = JSON.parse(fs.readFileSync('aryan.json'));
+		const urls = JSON.parse(fs.readFileSync('arohi.json'));
 		const link = urls[Math.floor(Math.random() * urls.length)];
 		const now = moment().tz('Asia/Jakarta');
 		const date = now.format('MMMM Do YYYY');
