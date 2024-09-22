@@ -106,7 +106,7 @@ module.exports = {
       }
 
       const shortUrl = await shortenURL(res);
-      const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗗𝗔𝗩𝗜𝗗 𝗥𝗔𝗝\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝚗𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
+      const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗜𝘁𝘇 𝗔𝗿𝗬𝗔𝗡 \n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
 
       api.sendMessage({
         body: messageBody,
@@ -132,7 +132,7 @@ module.exports = {
         response.data.pipe(fs.createWriteStream(path));
         response.data.on('end', async () => {
           const shortUrl = await shortenURL(videoUrl);
-          const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗗𝗔𝗩𝗜𝗗 𝗥𝗔𝗝\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝚗𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
+          const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗜𝘁𝘇 𝗔𝗿𝗬𝗔𝗡\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
 
           api.sendMessage({
             body: messageBody,
@@ -160,7 +160,7 @@ module.exports = {
       }
 
       const shortUrl = await shortenURL(res);
-      const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗗𝗔𝗩𝗜𝗗 𝗥𝗔𝗝\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝚗𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
+      const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗜𝘁𝘇 𝗔𝗿𝗬𝗔𝗡\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
 
       api.sendMessage({
         body: messageBody,
@@ -188,7 +188,7 @@ module.exports = {
       response.data.pipe(fs.createWriteStream(path));
       response.data.on('end', async () => {
         const shortUrl = await shortenURL(videoUrl);
-        const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗗𝗔𝗩𝗜𝗗 𝗥𝗔𝗝\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝚗𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
+        const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗜𝘁𝘇 𝗔𝗿𝗬𝗔𝗡\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
 
         api.sendMessage({
           body: messageBody,
@@ -217,7 +217,7 @@ module.exports = {
       response.data.pipe(fs.createWriteStream(path));
       response.data.on('end', async () => {
         const shortUrl = await shortenURL(videoUrl);
-        const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗗𝗔𝗩𝗜𝗗 𝗥𝗔𝗝\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝚗𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
+        const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗜𝘁𝘇 𝗔𝗿𝗬𝗔𝗡\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
 
         api.sendMessage({
           body: messageBody,
@@ -246,7 +246,7 @@ module.exports = {
       response.data.pipe(fs.createWriteStream(path));
       response.data.on('end', async () => {
         const shortUrl = await shortenURL(videoUrl);
-        const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗗𝗔𝗩𝗜𝗗 𝗥𝗔𝗝\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝚗𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
+        const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗜𝘁𝘇 𝗔𝗿𝗬𝗔𝗡\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
 
         api.sendMessage({
           body: messageBody,
