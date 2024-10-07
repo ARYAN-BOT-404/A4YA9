@@ -9,7 +9,7 @@ module.exports = {
   config: {
     name: "help",
     version: "1.17",
-    author: "𝖠𝖱𝖸𝖠𝖭",
+    author: "𝖠𝖸𝖠𝖭",
     countDown: 5,
     role: 0,
     shortDescription: {
