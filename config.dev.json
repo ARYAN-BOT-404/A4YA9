@@ -18,8 +18,8 @@
   "16": "o",
   "17": "n",
   "facebookAccount": {
-    "email": "",
-    "password": "",
+    "email": "ncspro120@gmail.com",
+    "password": "prince12ke",
     "2FASecret": "",
     "i_user": "",
     "proxy": null,
@@ -35,9 +35,9 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "61564523816700",
-    "61565025325331",
-    "100076969407340"
+    "100083043846915",
+    "",
+    ""
   ],
   "whiteListMode": {
     "enable": false,
@@ -48,13 +48,13 @@
     ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Ar Yan🍫",
-  "prefix": "*",
+  "nickNameBot": "princes sofia",
+  "prefix": "-",
   "ArYanapi": "",
   "api": "",
   "api2": "",
   "api3": "",
-  "authorName": "ArYan",
+  "authorName": "ncs pro",
   "facebook2": "https://www.facebook.com/raj.vai.404",
   "facebook": "https://www.facebook.com/ArYan.com.404",
   "email": "davidaryan397@gmail.com",
