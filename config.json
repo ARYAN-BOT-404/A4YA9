@@ -162,10 +162,10 @@
     "updatePresence": true,
     "listenTyping": true,
     "logLevel": "error",
-    "selfListen": true,
+    "selfListen": false,
     "selfListenEvent": true,
-    "autoMarkDelivery": true,
-    "autoReconnect": true,
+    "autoMarkDelivery": false,
+    "autoReconnect": false,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
   },
   "whiteListModeThread": {
