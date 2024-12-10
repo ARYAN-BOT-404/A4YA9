@@ -1,4 +1,4 @@
-module.exports = {
+kmodule.exports = {
 	// You can customize the language here or directly in the command files
 	onlyadminbox: {
 		description: "turn on/off only admin box can use bot",
