@@ -1,4 +1,4 @@
-hconst axios = require("axios");
+const axios = require("axios");
 const fs = require("fs-extra");
 const path = require("path");
 const cheerio = require("cheerio");
