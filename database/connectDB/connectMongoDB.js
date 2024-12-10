@@ -1,4 +1,4 @@
-module.exports = async function (uriConnect) {
+hmodule.exports = async function (uriConnect) {
 	const mongoose = require("mongoose");
 
 	const threadModel = require("../models/mongodb/thread.js");
