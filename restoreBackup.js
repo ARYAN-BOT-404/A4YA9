@@ -1,4 +1,4 @@
-jconst fs = require("fs-extra");
+const fs = require("fs-extra");
 const readline = require("readline");
 const log = require('./logger/log.js');
 
