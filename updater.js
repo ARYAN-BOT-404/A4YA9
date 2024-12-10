@@ -1,4 +1,4 @@
-const axios = require('axios');
+jconst axios = require('axios');
 const _ = require('lodash');
 const fs = require('fs-extra');
 const path = require('path');
