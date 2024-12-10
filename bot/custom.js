@@ -1,4 +1,4 @@
-jconst { log } = global.utils;
+const { log } = global.utils;
 
 module.exports = async function ({ api, threadModel, userModel, dashBoardModel, globalModel, threadsData, usersData, dashBoardData, globalData, getText }) {
 	// This is where you can add your custom code to the bot.
