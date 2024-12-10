@@ -1,4 +1,4 @@
-### **🛠️ Built-in Functions:**
+j### **🛠️ Built-in Functions:**
 * Translate
 * convertTime
 * enable/disable process.stderr.clearLine
