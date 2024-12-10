@@ -1,2 +1,2 @@
-klanguage = "nodejs"
+language = "nodejs"
 run = "npm start"
