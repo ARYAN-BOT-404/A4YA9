@@ -7,11 +7,15 @@ function checkShortCut(nickname, uid, userName) {
 module.exports = {
 	config: {
 		name: "autosetname",
-		version: "1.3",
+		version: "1.2",
 		author: "NTKhang",
 		cooldowns: 5,
 		role: 1,
-		description: {
+		shortDescription: {
+			vi: "Tự đổi biệt danh thành viên mới",
+			en: "Auto change nickname of new member"
+		},
+		longDescription: {
 			vi: "Tự đổi biệt danh cho thành viên mới vào nhóm chat",
 			en: "Auto change nickname of new member"
 		},

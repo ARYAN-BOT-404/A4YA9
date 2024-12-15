@@ -4,11 +4,15 @@ if (!global.client.busyList)
 module.exports = {
 	config: {
 		name: "busy",
-		version: "1.6",
+		version: "1.5",
 		author: "NTKhang",
 		countDown: 5,
 		role: 0,
-		description: {
+		shortDescription: {
+			vi: "bật chế độ không làm phiền",
+			en: "turn on do not disturb mode"
+		},
+		longDescription: {
 			vi: "bật chế độ không làm phiền, khi bạn được tag bot sẽ thông báo",
 			en: "turn on do not disturb mode, when you are tagged bot will notify"
 		},

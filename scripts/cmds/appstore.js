@@ -4,11 +4,15 @@ const { getStreamFromURL } = global.utils;
 module.exports = {
 	config: {
 		name: "appstore",
-		version: "1.2",
+		version: "1.1",
 		author: "NTKhang",
 		countDown: 5,
 		role: 0,
-		description: {
+		shortDescription: {
+			vi: "Tìm app trên appstore",
+			en: "Search app on appstore"
+		},
+		longDescription: {
 			vi: "Tìm app trên appstore",
 			en: "Search app on appstore"
 		},

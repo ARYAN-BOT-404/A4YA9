@@ -5,10 +5,14 @@ module.exports = {
 	config: {
 		name: "avatar",
 		author: "NTKhang",
-		version: "1.6",
+		version: "1.5",
 		cooldowns: 5,
 		role: 0,
-		description: {
+		shortDescription: {
+			vi: "tạo avatar anime",
+			en: "create anime avatar"
+		},
+		longDescription: {
 			vi: "tạo avatar anime với chữ ký",
 			en: "create anime avatar with signature"
 		},
