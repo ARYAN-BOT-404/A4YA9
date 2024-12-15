@@ -3,7 +3,7 @@ module.exports = {
 		name: "help6",
 		aliases: [`h`],
 		version: "1.0",
-		author: "Aryan Chauhan 🍒",
+		author: "ArYAN🍒",
 		countDown: 0,
 		category: "config",
 		role: 0,
@@ -63,7 +63,7 @@ module.exports = {
 		} else {
 			// Handle other cases (e.g., "help commandName")
 			// You can add custom logic here to provide instructions for specific commands.
-			responseMessage = "┏━𝗡𝗔𝗠𝗘 ━━━━━━⦿\n┣━No-Name\n┣━ 𝗜𝗡𝗙𝗢\n┃\n┣━𝗗𝗘𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡\n┃View command usage and list all commands directly\n┣━━𝗖𝗠𝗗 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 \n┃1.0\n┣━━𝗖𝗠𝗗 𝗥𝗢𝗟𝗘\n┃0 (All users)\n┣━━𝗨𝗦𝗘 𝗧𝗜𝗠𝗘\n┃5s\n┣━━𝗔𝗨𝗧𝗛𝗢𝗥\n┃❁𝗕𝗔𝗬𝗝𝗜𝗗𖣘 🍒\n┣━━USAGE\n┃NOT AVAILABLE\n┗━━━━━━━━━━━֎";
+			responseMessage = "┏━𝗡𝗔𝗠𝗘 ━━━━━━⦿\n┣━No-Name\n┣━ 𝗜𝗡𝗙𝗢\n┃\n┣━𝗗𝗘𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡\n┃View command usage and list all commands directly\n┣━━𝗖𝗠𝗗 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 \n┃1.0\n┣━━𝗖𝗠𝗗 𝗥𝗢𝗟𝗘\n┃0 (All users)\n┣━━𝗨𝗦𝗘 𝗧𝗜𝗠𝗘\n┃5s\n┣━━𝗔𝗨𝗧𝗛𝗢𝗥\n┃❁ArYAN 🍒\n┣━━USAGE\n┃NOT AVAILABLE\n┗━━━━━━━━━━━֎";
 		}
 
 		message.reply(responseMessage);
