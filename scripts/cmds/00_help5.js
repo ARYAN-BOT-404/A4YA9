@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "[ 🐐 | BAYJID GOATBOT V2 ]";
+const doNotDelete = "[ 🐐 | ArYAN GOATBOT V2 ]";
 
 module.exports = {
 	config: {
