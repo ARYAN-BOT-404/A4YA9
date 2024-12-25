@@ -1,48 +1,37 @@
-const axios = require("axios");
+const axios = require('axios');
 
-module.exports.config = {
-  name: "imgur",
-  version: "6.9",
-  author: "GoatMart",
-  countDown: 5,
-  role: 0,
-  category: "media",
-  description: "convert image/video/gifs/audio etc. into Imgur link",
-  usages: "reply [image, video, audio, gifs]",
-  category: "tools",
-};
+module.exports = {
+ config: {
+ name: "imgur",
+ version: "1.0",
+ author: "ArYAN",
+ countDown: 5,
+ role: 0,
+ shortDescription: {
+ en: "Upload image to imbb"
+ },
+ longDescription: {
+ en: "Upload image to imbb by replying to photo"
+ },
+ category: "IMAGE",
+ guide: {
+ en: ""
+ }
+ },
 
-module.exports.onStart = async function ({ api, event }) {
-  const url = event.messageReply?.attachments[0]?.url;
-  if (!url) {
-    return api.sendMessage(
-      "Please reply to an image, video, audio, gif etc.",
-      event.threadID,
-      event.messageID,
-    );
-  }
-  
-  try {
-    const baseApiUrl = 'https://g-v1.onrender.com';
-    
-    const uploadResponse = await axios.post(`${baseApiUrl}/v1/upload`, null, {
-      params: { url: url },
-    });
+ onStart: async function ({ api, event }) {
+ const linkanh = event.messageReply?.attachments[0]?.url;
+ if (!linkanh) {
+ return api.sendMessage('Please reply to an image.', event.threadID, event.messageID);
+ }
 
-    if (uploadResponse.status !== 200 || !uploadResponse.data.link) {
-      throw new Error('Failed to upload image.');
-    }
-
-    const shortLink = uploadResponse.data.link;
-    
-    return api.sendMessage(shortLink, event.threadID, event.messageID);
-
-  } catch (error) {
-    console.error(error);
-    return api.sendMessage(
-      "Failed to convert image or video into link.",
-      event.threadID,
-      event.messageID,
-    );
-  }
+ try {
+ const res = await axios.get(`https://aryan-noobs-apis.onrender.com/imgur?link=${encodeURIComponent(linkanh)}`);
+ const juswa = res.data.uploaded.image;
+ return api.sendMessage(juswa, event.threadID, event.messageID);
+ } catch (error) {
+ console.log(error);
+ return api.sendMessage('Failed to upload image to imbb.', event.threadID, event.messageID);
+ }
+ }
 };
